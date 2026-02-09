@@ -15,7 +15,7 @@ export default function ScheduleCTA() {
           {/* Background image */}
           <div className="absolute inset-0">
             <Image
-              src="/sechdule-cta/Rectangle.webp"
+              src="/home/sechdule-cta/Rectangle.webp"
               alt=""
               fill
               className="object-cover"
