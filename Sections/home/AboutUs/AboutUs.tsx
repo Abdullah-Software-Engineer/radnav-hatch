@@ -67,7 +67,7 @@ export default function AboutUs() {
           </div>
           <div className="relative aspect-4/3 overflow-hidden rounded-xl lg:aspect-auto lg:min-h-[340px]">
             <Image
-              src="/about-us/image.webp"
+              src="/home/about-us/image.webp"
               alt="Healthcare professional at workstation reviewing medical imaging"
               fill
               className="object-cover"
@@ -80,7 +80,7 @@ export default function AboutUs() {
         <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 md:mt-16 lg:grid-cols-3 lg:gap-6 lg:h-[360px]">
           <article className="relative min-h-[280px] overflow-hidden rounded-xl shadow-sm lg:min-h-full lg:h-full">
             <Image
-              src="/about-us/Rectangle (1).webp"
+              src="/home/about-us/Rectangle (1).webp"
               alt="Doctor explaining X-ray results to patient"
               fill
               className="object-cover"
@@ -105,7 +105,7 @@ export default function AboutUs() {
           </article>
           <article className="relative min-h-[280px] overflow-hidden rounded-xl shadow-sm lg:min-h-full lg:h-full">
             <Image
-              src="/about-us/Rectangle (2).webp"
+              src="/home/about-us/Rectangle (2).webp"
               alt="Medical team discussion in facility"
               fill
               className="object-cover"

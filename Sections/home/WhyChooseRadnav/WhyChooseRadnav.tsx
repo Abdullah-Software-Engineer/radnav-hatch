@@ -4,25 +4,25 @@ import Image from "next/image";
 
 const CARDS = [
   {
-    icon: "/why-choose-radnav/1.webp",
+    icon: "/home/why-choose-radnav/1.webp",
     title: "Efficiency",
     description:
       "Streamlined processes that quickly match facilities with qualified technologists, minimizing downtime.",
   },
   {
-    icon: "/why-choose-radnav/2.webp",
+    icon: "/home/why-choose-radnav/2.webp",
     title: "Skilled Professionals",
     description:
       "Access to a network of vetted, certified radiologic technologists with proven expertise.",
   },
   {
-    icon: "/why-choose-radnav/3.webp",
+    icon: "/home/why-choose-radnav/3.webp",
     title: "Innovation",
     description:
       "Modern staffing solutions leveraging technology for seamless communication and scheduling.",
   },
   {
-    icon: "/why-choose-radnav/4.webp",
+    icon: "/home/why-choose-radnav/4.webp",
     title: "Commitment",
     description:
       "Dedicated to supporting both healthcare facilities and technologists with personalized care.",
