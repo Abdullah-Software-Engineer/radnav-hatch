@@ -79,9 +79,9 @@ export default function OurServices() {
             className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl md:text-4xl"
           >
             Our{" "}
-            <span className="text-[#1E3A5F]">Services</span>
+            <span className="text-[#1B557B]">Services</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#4B5563] sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-[#4B5563] sm:text-xl lg:w-167">
             Comprehensive radiology staffing and imaging support designed to
             adapt to your facility&apos;s needs.
           </p>
@@ -92,7 +92,7 @@ export default function OurServices() {
           {SERVICES.map(({ title, description, icon }) => (
             <article
               key={title}
-              className="flex flex-col rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.04),0_6px_16px_-2px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.08)] sm:p-8"
+              className="flex flex-col rounded-2xl border border-[#1B557B] bg-white p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.04),0_6px_16px_-2px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.08)] sm:p-8"
             >
               <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1E3A5F] text-white sm:mb-6 sm:h-14 sm:w-14">
                 {icon}

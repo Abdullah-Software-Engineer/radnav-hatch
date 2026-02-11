@@ -6,9 +6,11 @@ export default function ServicesHero() {
       className="relative w-full bg-white px-4 pt-24 pb-14 sm:px-6 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24 lg:px-8 lg:pt-36 lg:pb-28"
       aria-label="Services hero"
     >
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full ">
         {/* Rounded gradient container — matches hero image layout */}
-        <div className="relative overflow-hidden rounded-4xl bg-linear-to-r from-[#1a4d6f] via-[#1F5C86] to-[#2a8ba8] px-6 py-14 text-center sm:rounded-[2.5rem] sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
+        <div className="relative overflow-hidden rounded-tr-[20px] rounded-br-[120px]  rounded-tl-[120px] rounded-bl-[20px]  bg-linear-to-r from-[#1a4d6f] via-[#1F5C86] to-[#2a8ba8] px-6 py-14 text-center sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
+
+
           {/* Decorative circles — bottom-left */}
           <div
             className="absolute bottom-0 left-0 h-40 w-40 -translate-x-1/2 translate-y-1/2 rounded-full border border-white/20 sm:h-52 sm:w-52"

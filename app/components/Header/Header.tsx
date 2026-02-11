@@ -40,23 +40,18 @@ export default function Header() {
           className="relative flex shrink-0 items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2 rounded-lg"
           aria-label="Radnav Solutions home"
         >
-          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full sm:h-10 sm:w-10">
+          <span className="relative flex h-12 w-auto shrink-0 items-center justify-center overflow-hidden sm:h-14">
             <Image
               src="/header/logo.webp"
               alt=""
-              width={40}
-              height={40}
-              className="h-full w-full object-contain object-center"
+              width={180}
+              height={56}
+              className="h-full w-auto object-contain object-center"
               priority
             />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-base font-semibold tracking-tight text-[#2E5D81] sm:text-lg">
-              Radnav
-            </span>
-            <span className="text-xs font-medium tracking-wide text-[#5B9AB8] sm:text-sm">
-              Solutions
-            </span>
+            
           </span>
         </Link>
 
@@ -64,8 +59,8 @@ export default function Header() {
         <nav
           className={`hidden items-center gap-1 rounded-full border px-4 py-2 backdrop-blur-md lg:flex ${
             scrolled
-              ? "border-[#8BA3B6]/40 bg-white/70 dark:border-white/20 dark:bg-white/10"
-              : "border-[#8BA3B6]/50 bg-white/40 dark:border-white/15 dark:bg-white/5"
+              ? "border-[#CDDAE2]/40 bg-[white/70] dark:border-[#1B557B] dark:bg-[#CDDAE2]"
+              : "border-[#CDDAE2]/50 bg-white/40 dark:border-[#1B557B] dark:bg-[#CDDAE2]"
           }`}
           aria-label="Main navigation"
         >
