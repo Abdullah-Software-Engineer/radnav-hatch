@@ -1,0 +1,184 @@
+"use client";
+
+const CARDS = [
+  {
+    title: "Competitive Pay",
+    description:
+      "Earn top rates with transparent pay structures and weekly direct deposits.",
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Flexible Locations",
+    description:
+      "Choose assignments near home or explore travel opportunities nationwide.",
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Work-Life Balance",
+    description:
+      "Set your own schedule with per diem, part-time, or full-time options.",
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Licensing Made Easy",
+    description:
+      "We help manage certifications and state licensing transitions.",
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 3v4a1 1 0 001 1h4"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Dedicated Support",
+    description:
+      "Your personal recruiter is available 24/7 to help you succeed.",
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Housing Support",
+    description: "Comfortable, convenient housing arranged for you.",
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-7-1a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-7-1h6"
+        />
+      </svg>
+    ),
+  },
+];
+
+export default function WhyTechsLoveUs() {
+  return (
+    <section
+      className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      aria-labelledby="why-techs-heading"
+    >
+      <div className="mx-auto max-w-6xl">
+        <header className="mb-14 text-center sm:mb-16 md:mb-20">
+          <h2
+            id="why-techs-heading"
+            className="text-2xl font-bold tracking-tight text-[#212529] sm:text-3xl md:text-4xl"
+          >
+            Why <span className="text-[#1a73e8]">Techs</span> Love Working With
+            Us
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-[#6c757d] sm:text-lg md:max-w-2xl md:mx-auto">
+            We treat our technologists like partners, not just placements.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
+          {CARDS.map(({ title, description, icon }) => (
+            <article
+              key={title}
+              className="flex flex-col rounded-2xl border border-[#e0e7ff] bg-white p-8 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.08),0_2px_4px_-2px_rgba(0,0,0,0.06)] text-left"
+            >
+              <div className="flex shrink-0 h-12 w-12 items-center justify-center rounded-full bg-[#0a588b] border border-[#c0d6ff] text-white">
+                {icon}
+              </div>
+              <h3 className="mt-5 text-lg font-bold tracking-tight text-[#212529]">
+                {title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#6c757d] sm:text-base">
+                {description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
