@@ -41,12 +41,12 @@ export default function KeyBenefits() {
           </p>
         </header>
 
-        {/* Benefits — four circles in one row, minimal gap / slight overlap */}
-        <div className="flex flex-nowrap items-center justify-center overflow-visible">
+        {/* Benefits — horizontal line on all screen sizes */}
+        <div className="flex flex-nowrap items-center justify-center overflow-x-auto overflow-y-visible pb-4">
           {BENEFITS.map(({ text, bgClass, hasDashedOutline }, index) => (
             <div
               key={text}
-              className={`relative flex h-44 w-44 shrink-0 items-center justify-center sm:h-48 sm:w-48 md:h-52 md:w-52 ${index > 0 ? "-ml-6 sm:-ml-8 md:-ml-10 lg:-ml-12" : ""}`}
+              className={`relative flex h-24 w-24 shrink-0 items-center justify-center sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 xl:h-52 xl:w-52 ${index > 0 ? "-ml-3 sm:-ml-4 md:-ml-6 lg:-ml-8 xl:-ml-12" : ""}`}
             >
               {hasDashedOutline && (
                 <div
@@ -55,9 +55,9 @@ export default function KeyBenefits() {
                 />
               )}
               <div
-                className={`relative z-10 flex h-36 w-36 items-center justify-center rounded-full sm:h-40 sm:w-40 md:h-44 md:w-44 ${bgClass}`}
+                className={`relative z-10 flex h-full w-full items-center justify-center rounded-full ${bgClass}`}
               >
-                <p className="px-4 text-center text-sm font-medium leading-snug text-white sm:text-base">
+                <p className="px-2 text-center text-[10px] font-medium leading-tight text-white sm:px-3 sm:text-xs md:px-4 md:text-sm lg:text-base">
                   {text}
                 </p>
               </div>

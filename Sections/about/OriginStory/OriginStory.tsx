@@ -19,7 +19,7 @@ export default function OriginStory() {
             />
             <div className="relative overflow-hidden rounded-2xl shadow-lg shadow-gray-200/50 sm:rounded-3xl">
               <Image
-                src="/About-us/hero.png"
+                src="/About-us/image.png"
                 alt="Medical professionals in a modern imaging facility reviewing diagnostic technology"
                 width={560}
                 height={400}
