@@ -9,7 +9,7 @@ export default function ContactHero() {
       className="relative w-full bg-white px-4 pt-24 pb-14 sm:px-6 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24 lg:px-8 lg:pt-36 lg:pb-28"
       aria-label="Contact hero"
     >
-      <div className="mx-auto w-full">
+      <div className="mx-auto w-full max-w-[1390px]">
         {/* Rounded container with bg image + overlay */}
         <div className="relative overflow-hidden rounded-[50px] min-h-[420px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[560px]">
           {/* Background image */}

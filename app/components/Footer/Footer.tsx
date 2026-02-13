@@ -73,7 +73,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#285A7E] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-[1390px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
           {/* Address */}
           <section className="space-y-4">
@@ -154,10 +154,12 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-white/20 px-4 py-4 text-center sm:px-6 lg:px-8">
-        <p className="text-sm text-white/70">
-          ©2026 Radnav Solutions. All rights reserved.
-        </p>
+      <div className="border-t border-white/20">
+        <div className="mx-auto max-w-[1390px] px-4 py-4 text-center sm:px-6 lg:px-8">
+          <p className="text-sm text-white/70">
+            ©2026 Radnav Solutions. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

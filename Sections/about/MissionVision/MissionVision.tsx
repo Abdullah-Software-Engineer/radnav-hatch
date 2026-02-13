@@ -6,7 +6,7 @@ export default function MissionVision() {
       className="relative w-full bg-[#F8F8F8] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="mission-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           {/* Our Mission */}
           <article className="max-w-xl" aria-labelledby="mission-heading">

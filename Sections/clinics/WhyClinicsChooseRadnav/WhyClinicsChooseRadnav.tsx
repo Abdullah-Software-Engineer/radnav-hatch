@@ -94,7 +94,7 @@ export default function WhyClinicsChooseRadnav() {
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="why-clinics-choose-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
           <h2
             id="why-clinics-choose-heading"

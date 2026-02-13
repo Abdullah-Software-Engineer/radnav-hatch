@@ -35,7 +35,7 @@ export default function WhyChooseRadnav() {
       className="relative w-full bg-[#214E6E] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28 rounded-b-3xl"
       aria-labelledby="why-choose-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
           <h2
             id="why-choose-heading"

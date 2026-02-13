@@ -103,7 +103,7 @@ export default function GetInTouch() {
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="get-in-touch-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left: Contact Form */}
           <div className="rounded-2xl bg-[#F5F5F5] p-8 shadow-sm sm:p-10 md:p-12">

@@ -8,7 +8,7 @@ export default function OriginStory() {
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="origin-story-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         {/* Two-column: image left, text right */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.42fr_1fr] lg:items-start lg:gap-14 xl:gap-16">
           {/* Left: image with rounded corners + blue accent */}

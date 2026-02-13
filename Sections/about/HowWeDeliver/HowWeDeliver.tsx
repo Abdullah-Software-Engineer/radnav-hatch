@@ -62,7 +62,7 @@ export default function HowWeDeliver() {
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="how-we-deliver-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         <header className="mx-auto max-w-2xl text-center">
           <h2
             id="how-we-deliver-heading"

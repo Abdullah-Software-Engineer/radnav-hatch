@@ -73,7 +73,7 @@ export default function WhatWeDo() {
       className="relative w-full px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24"
       aria-labelledby="what-we-do-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         {/* Rounded container: background image + overlay + content + cards */}
         <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl">
           {/* Background image + overlay — behind the cards */}

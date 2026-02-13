@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative w-full bg-white pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24"
       aria-label="Hero"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
         {/* Top: headline + paragraph — responsive two-column / stacked */}
         <div className="grid gap-8 lg:grid-cols-[1fr_minmax(280px,400px)] lg:gap-12 xl:gap-16 lg:items-end">
           <div>

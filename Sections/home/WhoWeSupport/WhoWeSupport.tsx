@@ -42,7 +42,7 @@ export default function WhoWeSupport() {
       className="relative w-full bg-[#f8fafc] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="who-we-support-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         {/* Heading + subheading — centered */}
         <header className="mx-auto max-w-3xl text-center">
           <h2

@@ -26,7 +26,7 @@ export default function AboutUs() {
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="about-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         {/* Top: text left, image right */}
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-12 xl:gap-16 lg:items-center">
           <div>

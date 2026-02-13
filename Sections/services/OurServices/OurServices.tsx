@@ -71,7 +71,7 @@ export default function OurServices() {
       className="relative w-full bg-[#FAFAFA] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="our-services-heading"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1390px]">
         {/* Header — left-aligned */}
         <header className="mb-12 max-w-3xl sm:mb-14 md:mb-16">
           <h2

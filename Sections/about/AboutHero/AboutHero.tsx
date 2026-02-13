@@ -9,7 +9,7 @@ export default function AboutHero() {
       className="relative w-full px-4 pt-24 pb-14 sm:px-6 sm:pt-28 sm:pb-20 md:pt-32 md:pb-20 lg:px-8 lg:pt-36 lg:pb-24"
       aria-label="About Radnav Solutions"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-[1390px]">
         {/* Card-style container: two equal columns on large screens, stacked on small */}
         <div className="overflow-hidden rounded-2xl bg-white shadow-xl shadow-gray-200/60 sm:rounded-3xl">
           <div className="grid min-h-0 grid-cols-1 lg:grid-cols-2 lg:min-h-[520px]">
