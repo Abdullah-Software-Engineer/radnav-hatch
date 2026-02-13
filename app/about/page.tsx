@@ -16,9 +16,9 @@ export default function AboutPage() {
   return (
     <main>
       <AboutHero />
+      <HowWeDeliver />
       <MissionVision />
       <WhatWeDo />
-      <HowWeDeliver />
       <OriginStory />
       <WhoWeSupport />
       <ScheduleCTA />

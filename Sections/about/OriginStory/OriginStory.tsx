@@ -9,8 +9,8 @@ export default function OriginStory() {
       aria-labelledby="origin-story-heading"
     >
       <div className="mx-auto max-w-[1390px]">
-        {/* Two-column: image left, text right */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.42fr_1fr] lg:items-start lg:gap-14 xl:gap-16">
+        {/* Two-column: image left, text right - 50/50 split */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-14 xl:gap-16">
           {/* Left: image with rounded corners + blue accent */}
           <div className="relative shrink-0">
             <div
@@ -24,7 +24,7 @@ export default function OriginStory() {
                 width={560}
                 height={400}
                 className="aspect-4/3 w-full object-cover"
-                sizes="(max-width: 1024px) 100vw, 42vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -36,16 +36,16 @@ export default function OriginStory() {
               className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
               Our{" "}
-              <span className="text-[#1E3A5F]">Origin Story</span>
+              <span className="text-[#2E5D81]">Origin Story</span>
             </h2>
             <div className="mt-6 space-y-5 sm:mt-8 sm:space-y-6">
-              <p className="text-[14px] leading-relaxed text-[#4B5563] md:text-[14px] lg:text-[16px] xl:text-[16px]">
+              <p className="text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px]">
                 Radnav Solutions was founded by a seasoned Radiologic Technologist
                 who recognized a critical gap in traditional staffing models—many
                 agencies lacked a true understanding of the complex demands of
                 imaging departments.
               </p>
-              <p className="text-[14px] leading-relaxed text-[#4B5563] md:text-[14px] lg:text-[16px] xl:text-[16px]">
+              <p className="text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px]">
                 Driven by firsthand experience, we built a staffing approach
                 rooted in empathy, expertise and precision. Our growth has been
                 guided not by scale alone, but by our ability to consistently

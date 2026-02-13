@@ -70,57 +70,62 @@ const CARDS = [
 export default function WhatWeDo() {
   return (
     <section
-      className="relative w-full px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24"
+      className="relative w-full py-12 sm:py-16 md:py-20 lg:py-24"
       aria-labelledby="what-we-do-heading"
     >
-      <div className="mx-auto max-w-[1390px]">
-        {/* Rounded container: background image + overlay + content + cards */}
-        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl">
-          {/* Background image + overlay — behind the cards */}
-          <div className="relative aspect-4/3 min-h-[320px] sm:aspect-21/9 sm:min-h-[380px] md:min-h-[420px]">
-            <Image
-              src="/what-we-do/Mask%20group.png"
-              alt=""
-              fill
-              className="object-cover"
-              sizes="(max-width: 1280px) 100vw, 1280px"
-              priority={false}
-            />
-          
-            {/* Title and subtitle — top-left, above overlay */}
-            <div className="absolute left-0 top-0 z-10 p-6 sm:p-8 md:p-10 lg:p-12">
-              <h2
-                id="what-we-do-heading"
-                className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
-              >
-                What We Do
-              </h2>
-              <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/95 sm:mt-4 md:text-[14px] lg:text-[16px] xl:text-[16px]">
-                Specialized radiology staffing solutions designed to support care
-                teams and maintain continuity.
-              </p>
-            </div>
-          </div>
+      {/* Full Width Container - 20px margins, 20px border radius (contains image) */}
+      <div className="relative mx-5 overflow-hidden rounded-[20px] sm:mx-5 md:mx-5 lg:mx-5">
+        {/* Background image - full width, absolute to cover content height */}
+        <div className="absolute inset-0 h-full w-full">
+          <Image
+            src="/what-we-do/Mask%20group.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority={false}
+          />
+        </div>
 
-          {/* White cards — in front, anchored at bottom of background */}
-          <div className="absolute bottom-[20px] left-0 right-0 z-20 px-4 pb-0 pt-0 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3 lg:gap-8">
-              {CARDS.map(({ title, description, icon }) => (
-                <article
-                  key={title}
-                  className="flex flex-col rounded-xl  bg-white p-6 shadow-lg shadow-gray-900/15 sm:p-7 "
+        {/* Content Container - 1390px max-width, no left padding (contains title, subtitle, cards) */}
+        <div className="relative z-10">
+          <div className="mx-auto w-full max-w-[1380px] pl-4 pr-4 sm:pl-0 sm:pr-6 lg:pr-8">
+            <div className="flex flex-col justify-between gap-10 py-8 sm:gap-12 sm:py-10 md:min-h-[500px] md:py-12 lg:min-h-[550px]">
+              {/* Title and subtitle — top-left of the 1390px container */}
+              <div className="pl-4 sm:pl-6 lg:pl-8">
+                <h2
+                  id="what-we-do-heading"
+                  className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#1E3A5F] text-white">
-                    {icon}
-                  </div>
-                  <h3 className="text-[20px] font-bold text-[#1F2937]">
-                    {title}
-                  </h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-[#4B5563]">
-                    {description}
-                  </p>
-                </article>
-              ))}
+                  What We Do
+                </h2>
+                <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/95 sm:mt-4 md:text-[14px] lg:text-[16px] xl:text-[16px]">
+                  Specialized radiology staffing solutions designed to support care
+                  teams and maintain continuity.
+                </p>
+              </div>
+
+              {/* White cards — at bottom of the 1390px container */}
+              <div>
+                <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3 lg:gap-8">
+                  {CARDS.map(({ title, description, icon }) => (
+                    <article
+                      key={title}
+                      className="flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 sm:p-7"
+                    >
+                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#2E5D81] text-white">
+                        {icon}
+                      </div>
+                      <h3 className="text-[20px] font-bold text-[#171717]">
+                        {title}
+                      </h3>
+                      <p className="mt-2 text-[14px] leading-relaxed text-[#5B7281]">
+                        {description}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
