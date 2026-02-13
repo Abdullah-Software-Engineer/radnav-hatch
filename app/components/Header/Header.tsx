@@ -20,12 +20,13 @@ export default function Header() {
 
   const closeMenu = useCallback(() => setMobileMenuOpen(false), []);
 
-  const isActive = (href: string) => {
+  const isActive = useCallback((href: string) => {
     if (href === "/") {
       return pathname === "/";
     }
-    return pathname.startsWith(href);
-  };
+    // Exact match or starts with the href (for nested routes)
+    return pathname === href || pathname.startsWith(href + "/");
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
