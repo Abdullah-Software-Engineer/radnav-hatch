@@ -33,19 +33,19 @@ export default function OriginStory() {
           <div className="flex flex-col lg:pt-2">
             <h2
               id="origin-story-heading"
-              className="text-2xl font-bold tracking-tight text-[#171717] sm:text-3xl md:text-4xl"
+              className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
               Our{" "}
               <span className="text-[#1E3A5F]">Origin Story</span>
             </h2>
             <div className="mt-6 space-y-5 sm:mt-8 sm:space-y-6">
-              <p className="text-base leading-relaxed text-[#4B5563] sm:text-lg">
+              <p className="text-[14px] leading-relaxed text-[#4B5563] md:text-[14px] lg:text-[16px] xl:text-[16px]">
                 Radnav Solutions was founded by a seasoned Radiologic Technologist
                 who recognized a critical gap in traditional staffing models—many
                 agencies lacked a true understanding of the complex demands of
                 imaging departments.
               </p>
-              <p className="text-base leading-relaxed text-[#4B5563] sm:text-lg">
+              <p className="text-[14px] leading-relaxed text-[#4B5563] md:text-[14px] lg:text-[16px] xl:text-[16px]">
                 Driven by firsthand experience, we built a staffing approach
                 rooted in empathy, expertise and precision. Our growth has been
                 guided not by scale alone, but by our ability to consistently

@@ -98,11 +98,11 @@ export default function WhyClinicsChooseRadnav() {
         <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
           <h2
             id="why-clinics-choose-heading"
-            className="text-2xl font-bold tracking-tight text-[#171717] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Why Hospitals Choose RadNav
           </h2>
-          <p className="mt-4 text-[#5B7281] text-base sm:text-lg leading-relaxed">
+          <p className="mt-4 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
             We understand the critical nature of radiology departments. That&apos;s why we deliver quality staffing solutions, fast.
           </p>
         </header>
@@ -116,10 +116,10 @@ export default function WhyClinicsChooseRadnav() {
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1a4d6f] text-white">
                 {icon}
               </div>
-              <h3 className="mt-4 text-lg font-bold tracking-tight text-[#171717]">
+              <h3 className="mt-4 text-[20px] font-bold tracking-tight text-[#171717]">
                 {title}
               </h3>
-              <p className="mt-2 text-[#5B7281] text-sm sm:text-base leading-relaxed">
+              <p className="mt-2 text-[#5B7281] text-[14px] leading-relaxed">
                 {description}
               </p>
             </article>

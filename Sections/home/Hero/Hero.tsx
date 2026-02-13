@@ -12,12 +12,12 @@ export default function Hero() {
         {/* Top: headline + paragraph — responsive two-column / stacked */}
         <div className="grid gap-8 lg:grid-cols-[1fr_minmax(280px,400px)] lg:gap-12 xl:gap-16 lg:items-end">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-[#171717] sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-6xl max-w-3xl leading-[1.15]">
+            <h1 className="text-[36px] font-bold tracking-tight text-[#171717] md:text-[48px] lg:text-[56px] xl:text-[56px] max-w-3xl leading-[1.15]">
               Connecting Healthcare with{" "}
               <span className="text-[#2E5D81]">Qualified Technologists</span>
             </h1>
           </div>
-          <p className="text-base text-[#5B7281] leading-relaxed sm:text-lg max-w-lg lg:max-w-none lg:pb-1">
+          <p className="text-[16px] text-[#5B7281] leading-relaxed md:text-[16px] lg:text-[18px] xl:text-[20px] max-w-lg lg:max-w-none lg:pb-1">
             Connecting hospitals and clinics with experienced radiology technologists when and where they&apos;re needed.
           </p>
         </div>

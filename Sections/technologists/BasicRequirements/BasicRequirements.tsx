@@ -16,7 +16,7 @@ export default function BasicRequirements() {
       <div className="mx-auto max-w-6xl">
         <h2
           id="basic-requirements-heading"
-          className="text-2xl font-bold tracking-tight text-center mb-12 sm:mb-14 sm:text-3xl md:text-4xl"
+          className="text-[30px] font-bold tracking-tight text-center mb-12 sm:mb-14 md:text-[30px] lg:text-[48px] xl:text-[48px]"
         >
           <span className="text-[#2A3852]">Basic</span>{" "}
           <span className="text-[#286B91]">Requirements</span>

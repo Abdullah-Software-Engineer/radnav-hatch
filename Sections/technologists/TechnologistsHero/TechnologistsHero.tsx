@@ -23,10 +23,10 @@ export default function TechnologistsHero() {
 
           {/* Content — left-aligned */}
           <div className="relative z-1000 flex h-full min-h-[420px] flex-col justify-center px-6 py-14 sm:min-h-[480px] sm:px-10 sm:py-16 md:min-h-[520px] md:max-w-xl md:px-14 md:py-20 lg:min-h-[560px] lg:max-w-2xl lg:px-16 lg:py-24">
-            <h1 className="text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.2]">
+            <h1 className="text-[30px] font-bold leading-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px] lg:leading-[1.2]">
               Your Career, Your Terms
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-white/95 sm:mt-5 sm:text-lg md:text-lg">
+            <p className="mt-4 text-[16px] leading-relaxed text-white/95 sm:mt-5 md:text-[16px] lg:text-[16px] xl:text-[18px]">
               Join a network of top radiology professionals. Whether you&apos;re
               looking for flexibility, better pay, or your next adventure, we&apos;ve
               got opportunities waiting for you.
@@ -34,7 +34,7 @@ export default function TechnologistsHero() {
             <div className="mt-8 sm:mt-10">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-[#1a4d6f] shadow-md transition hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:px-8 sm:py-4"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[14px] font-semibold text-[#1a4d6f] shadow-md transition hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:px-8 sm:py-4 lg:text-[14px] xl:text-[16px]"
               >
                 Apply Now
                 <svg

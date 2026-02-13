@@ -47,12 +47,12 @@ export default function WhoWeSupport() {
         <header className="mx-auto max-w-3xl text-center">
           <h2
             id="who-we-support-heading"
-            className="text-3xl font-bold tracking-tight text-[#333333] sm:text-4xl md:text-5xl"
+            className="text-[30px] font-bold tracking-tight text-[#333333] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Who We{" "}
             <span className="text-[#2D78AD]">Support</span>
           </h2>
-          <p className="mt-4 text-base text-[#333333] sm:text-lg md:text-xl">
+          <p className="mt-4 text-[14px] text-[#333333] md:text-[14px] lg:text-[16px] xl:text-[16px]">
             Customized radiology staffing solutions designed for today&apos;s
             healthcare demands.
           </p>
@@ -72,8 +72,8 @@ export default function WhoWeSupport() {
               <h3
                 className={
                   card.variant === "filled"
-                    ? "text-xl font-bold text-white sm:text-2xl"
-                    : "text-xl font-bold text-[#2D6B8C] sm:text-2xl"
+                    ? "text-[20px] font-bold text-white"
+                    : "text-[20px] font-bold text-[#2D6B8C]"
                 }
               >
                 {card.title}
@@ -81,8 +81,8 @@ export default function WhoWeSupport() {
               <p
                 className={
                   card.variant === "filled"
-                    ? "mt-4 flex-1 text-base text-white/95 leading-relaxed sm:text-lg"
-                    : "mt-4 flex-1 text-base text-[#2D6B8C] leading-relaxed sm:text-lg"
+                    ? "mt-4 flex-1 text-[14px] text-white/95 leading-relaxed"
+                    : "mt-4 flex-1 text-[14px] text-[#2D6B8C] leading-relaxed"
                 }
               >
                 {card.description}
@@ -91,8 +91,8 @@ export default function WhoWeSupport() {
                 href={card.href}
                 className={
                   card.variant === "filled"
-                    ? "mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2D6B8C]"
-                    : "mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#2D6B8C] transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2D6B8C] focus-visible:ring-offset-2"
+                    ? "mt-6 inline-flex items-center gap-2 text-[16px] font-semibold text-white transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2D6B8C]"
+                    : "mt-6 inline-flex items-center gap-2 text-[16px] font-semibold text-[#2D6B8C] transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2D6B8C] focus-visible:ring-offset-2"
                 }
               >
                 Learn more

@@ -28,14 +28,14 @@ export default function ScheduleCTA() {
           <div className="relative z-10 flex flex-col items-center justify-center px-6 py-14 text-center sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-20 lg:py-24">
             <h2
               id="schedule-cta-heading"
-              className="max-w-4xl text-2xl  leading-snug text-white sm:text-3xl md:text-4xl md:leading-snug"
+              className="max-w-4xl text-[30px] leading-snug text-white md:text-[30px] lg:text-[48px] xl:text-[48px] md:leading-snug"
             >
               Ease workload pressure and maintain high-quality care with expert
               radiology navigators built to support your team.
             </h2>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#38BDF8] px-6 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-[#0EA5E9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-black/30 sm:mt-10 sm:px-8 sm:py-4 sm:text-lg"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#38BDF8] px-6 py-4 text-[14px] font-semibold text-white shadow-lg transition hover:bg-[#0EA5E9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-black/30 sm:mt-10 sm:px-8 sm:py-4"
             >
               Schedule a conversation today
               <span aria-hidden>→</span>

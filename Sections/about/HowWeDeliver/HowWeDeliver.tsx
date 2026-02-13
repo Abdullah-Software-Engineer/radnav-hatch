@@ -66,12 +66,12 @@ export default function HowWeDeliver() {
         <header className="mx-auto max-w-2xl text-center">
           <h2
             id="how-we-deliver-heading"
-            className="text-2xl font-bold tracking-tight text-[#2F333E] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#2F333E] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             How We Deliver{" "}
             <span className="text-[#2563EB]">Better Staffing</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#6B7280] sm:text-lg">
+          <p className="mt-4 text-[14px] leading-relaxed text-[#6B7280] md:text-[14px] lg:text-[16px] xl:text-[16px]">
             Trusted radiology staffing built on expertise, flexibility, and care.
           </p>
         </header>
@@ -88,10 +88,10 @@ export default function HowWeDeliver() {
             <div className="mb-4 flex h-11 w-11 items-center justify-center text-[#1E3A5F] sm:h-12 sm:w-12">
               <IconFlags className="h-7 w-7 sm:h-8 sm:w-8" />
             </div>
-            <h3 className="text-lg font-bold text-[#1E3A5F] sm:text-xl">
+            <h3 className="text-[20px] font-bold text-[#1E3A5F]">
               Radiology-Driven Leadership
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-[#1E3A5F]/95 sm:text-base">
+            <p className="mt-2 text-[14px] leading-relaxed text-[#1E3A5F]/95">
               Built by professionals who know imaging from the inside.
             </p>
           </article>
@@ -101,22 +101,22 @@ export default function HowWeDeliver() {
             <div className="mb-4 flex h-11 w-11 items-center justify-center text-white sm:h-12 sm:w-12">
               <IconVetted className="h-7 w-7 sm:h-8 sm:w-8" />
             </div>
-            <h3 className="text-lg font-bold text-white sm:text-xl">
+            <h3 className="text-[20px] font-bold text-white">
               Vetted Professionals
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/90 sm:text-base">
+            <p className="mt-2 text-[14px] leading-relaxed text-white/90">
               Qualified, compliant and ready to perform.
             </p>
           </article>
 
           {/* Card 3: shorter than 2 */}
           <article className="flex min-h-[180px] flex-col rounded-2xl bg-[#CDDAE2] p-6 sm:min-h-[220px] sm:p-7 lg:min-h-[260px]">
-            <p className="text-base font-medium text-[#4B5563] sm:text-lg">
+            <p className="text-[14px] font-medium text-[#4B5563]">
               Staffing that scales with your needs.
             </p>
             <Link
               href="/services"
-              className="mt-5 inline-flex items-center justify-center gap-2 self-center rounded-xl bg-[#1F5C86] px-5 py-3.5 text-base font-medium text-white shadow transition hover:bg-[#1a4d6f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1F5C86] focus-visible:ring-offset-2 focus-visible:ring-offset-[#E5E7EB] sm:px-6 sm:py-4"
+              className="mt-5 inline-flex items-center justify-center gap-2 self-center rounded-xl bg-[#1F5C86] px-5 py-3.5 text-[16px] font-medium text-white shadow transition hover:bg-[#1a4d6f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1F5C86] focus-visible:ring-offset-2 focus-visible:ring-offset-[#E5E7EB] sm:px-6 sm:py-4"
             >
               View Services
               <span aria-hidden>→</span>
@@ -128,10 +128,10 @@ export default function HowWeDeliver() {
             <div className="mb-4 flex h-11 w-11 items-center justify-center text-white sm:h-12 sm:w-12">
               <IconEthical className="h-7 w-7 sm:h-8 sm:w-8" />
             </div>
-            <h3 className="text-lg font-bold text-white sm:text-xl">
+            <h3 className="text-[20px] font-bold text-white">
               Ethical by Design
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-white/95 sm:text-base">
+            <p className="mt-2 text-[14px] leading-relaxed text-white/95">
               People-first, inclusive, and transparent.
             </p>
           </article>

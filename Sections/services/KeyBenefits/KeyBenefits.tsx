@@ -32,11 +32,11 @@ export default function KeyBenefits() {
         <header className="mb-12 text-center sm:mb-14 md:mb-16">
           <h2
             id="key-benefits-heading"
-            className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#1F2937] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Our Key Benefits
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#1F2937] sm:text-lg md:max-w-2xl md:mx-auto">
+          <p className="mt-4 text-[14px] leading-relaxed text-[#1F2937] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto">
             More than staffing—reliable partnership you can trust.
           </p>
         </header>

@@ -19,12 +19,12 @@ export default function StaffingSolutions() {
         <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
           <h2
             id="staffing-solutions-heading"
-            className="text-2xl font-bold tracking-tight text-[#171717] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             <span className="text-[#1a4d6f]">Staffing Solutions</span>{" "}
             <span className="text-[#171717]">We Provide</span>
           </h2>
-          <p className="mt-4 text-[#5B7281] text-base sm:text-lg leading-relaxed">
+          <p className="mt-4 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
             Access specialized talent across all radiology modalities.
           </p>
         </header>
