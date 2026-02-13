@@ -36,8 +36,20 @@ export default function WhyChooseRadnav() {
       aria-labelledby="why-choose-heading"
     >
       {/* Container with 20px margins and 20px border radius */}
-      <div className="mx-5 sm:mx-5 md:mx-5 lg:mx-5 bg-[#214E6E] rounded-[20px] py-16 sm:py-20 md:py-24 lg:py-28">
-        <div className="mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-5 sm:mx-5 md:mx-5 lg:mx-5 relative rounded-[20px] overflow-hidden py-16 sm:py-20 md:py-24 lg:py-28">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/home/whychooseus.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+        </div>
+        {/* Content with relative positioning */}
+        <div className="relative z-10 mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
           <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
             <h2
               id="why-choose-heading"

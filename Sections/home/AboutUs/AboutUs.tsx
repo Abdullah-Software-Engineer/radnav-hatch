@@ -15,7 +15,7 @@ const ArrowIcon = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      d="M7 17L17 7M17 7h-10v10"
+      d="M9 5l7 7-7 7"
     />
   </svg>
 );
@@ -34,8 +34,7 @@ export default function AboutUs() {
               id="about-heading"
               className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
-              Know More About{" "}
-              <span className="text-[#2E5D81]">Radnav Solutions</span>
+              Know More <span className="text-[#2E5D81]">About Radnav Solutions</span>
             </h2>
             <p className="mt-5 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
               At Radnav Solutions, we bridge the gap between healthcare
@@ -52,20 +51,20 @@ export default function AboutUs() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-lg bg-[#2E5D81] px-5 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#2E5D81]/20 transition hover:bg-[#264a6a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-[30px] bg-[#2E5D81] px-8 py-3.5 text-[14px] font-semibold text-white shadow-lg shadow-[#2E5D81]/20 transition hover:bg-[#264a6a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
               >
                 Learn More
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-lg border border-[#8BA3B6]/60 bg-white px-5 py-3 text-[14px] font-semibold text-[#171717] transition hover:bg-[#f8fafc] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-[30px] border border-[#2E5D81] bg-white px-8 py-3.5 text-[14px] font-semibold text-[#2E5D81] transition hover:bg-[#f8fafc] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
               >
                 Our Services
                 <ArrowIcon />
               </Link>
             </div>
           </div>
-          <div className="relative aspect-4/3 overflow-hidden rounded-xl lg:aspect-auto lg:min-h-[340px]">
+          <div className="relative aspect-4/3 overflow-hidden rounded-[20px] lg:aspect-auto lg:h-[400px]">
             <Image
               src="/home/about-us/image.webp"
               alt="Healthcare professional at workstation reviewing medical imaging"
@@ -76,34 +75,39 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Bottom: three equal-height cards — image, teal CTA, image */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 md:mt-16 lg:grid-cols-3 lg:gap-6 lg:h-[360px]">
-          <article className="relative min-h-[280px] overflow-hidden rounded-xl shadow-sm lg:min-h-full lg:h-full">
+        {/* Bottom: customized grid layout */}
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 md:mt-10 lg:grid-cols-[1.8fr_1fr_1fr] lg:gap-6 lg:h-[360px]">
+          {/* Left: Wide image */}
+          <article className="relative min-h-[280px] overflow-hidden rounded-[20px] shadow-sm lg:min-h-full lg:h-full">
             <Image
               src="/home/about-us/Rectangle (1).webp"
               alt="Doctor explaining X-ray results to patient"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 33vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </article>
-          <article className="flex min-h-[280px] flex-col items-center justify-center rounded-xl bg-[#0d9488] px-6 py-8 text-center shadow-sm sm:px-8 sm:py-10 lg:min-h-full lg:h-full">
-            <p className="text-[20px] font-bold leading-snug text-white">
-              24/7 support
+
+          {/* Middle: Blue card */}
+          <article className="flex min-h-[280px] flex-col items-start justify-center rounded-[20px] bg-[#5BB5D9] px-6 py-8 text-left shadow-sm sm:px-8 sm:py-10 lg:min-h-full lg:h-full">
+            <p className="text-[24px] font-medium leading-tight text-white">
+              24/7 support for
               <br />
-              for healthcare
+              healthcare
               <br />
               facilities
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-[16px] font-semibold text-[#2E5D81] shadow-md transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d9488]"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[14px] font-semibold text-[#171717] shadow-md transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#5BB5D9]"
             >
               Contact Now
               <ArrowIcon />
             </Link>
           </article>
-          <article className="relative min-h-[280px] overflow-hidden rounded-xl shadow-sm lg:min-h-full lg:h-full">
+
+          {/* Right: Standard image */}
+          <article className="relative min-h-[280px] overflow-hidden rounded-[20px] shadow-sm lg:min-h-full lg:h-full">
             <Image
               src="/home/about-us/Rectangle (2).webp"
               alt="Medical team discussion in facility"
