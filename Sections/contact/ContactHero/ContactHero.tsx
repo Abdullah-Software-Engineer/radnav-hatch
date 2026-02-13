@@ -12,9 +12,9 @@ export default function ContactHero() {
       <div className="mx-auto w-full">
         {/* Rounded container with bg image + overlay */}
         <div className="relative overflow-hidden rounded-[50px] min-h-[420px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[560px]">
-          {/* Background image - using clinics hero image as placeholder */}
+          {/* Background image */}
           <Image
-            src="/clinics/Mask (5).webp"
+            src="/get-in-touch/Mask.webp"
             alt="Professional working at desk"
             width={1280}
             height={800}
