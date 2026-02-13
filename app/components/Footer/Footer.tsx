@@ -74,56 +74,58 @@ export default function Footer() {
   return (
     <footer className="bg-[#285A7E] text-white">
       <div className="mx-auto max-w-[1390px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-12">
           {/* Address */}
-          <section className="space-y-4">
-            <h3 className="text-lg font-bold tracking-tight">Address</h3>
-            <address className="not-italic">
-              {ADDRESS_LINES.map((line) => (
-                <span key={line} className="block text-white/95">
-                  {line}
-                </span>
-              ))}
-            </address>
-            <div className="flex flex-col gap-3 pt-1">
-              <a
-                href="mailto:info@radnavsolutions.com"
-                className="flex items-center gap-2 text-white/95 transition hover:text-white"
-              >
-                <EnvelopeIcon className="h-5 w-5 shrink-0" />
-                <span>info@radnavsolutions.com</span>
-              </a>
-              <div className="flex items-center gap-2 text-white/95">
-                <PhoneIcon className="h-5 w-5 shrink-0" />
-                <span>Phone Number</span>
+          <section className="space-y-6">
+            <h3 className="text-2xl font-normal tracking-tight">Address</h3>
+            <div className="space-y-4 text-white/90">
+              <address className="not-italic leading-relaxed">
+                {ADDRESS_LINES.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </address>
+              <div className="flex flex-col gap-3 pt-2">
+                <a
+                  href="mailto:info@radnavsolutions.com"
+                  className="flex items-center gap-3 transition hover:text-white"
+                >
+                  <EnvelopeIcon className="h-5 w-5 shrink-0" />
+                  <span>info@radnavsolutions.com</span>
+                </a>
+                <div className="flex items-center gap-3">
+                  <PhoneIcon className="h-5 w-5 shrink-0" />
+                  <span>Phone Number</span>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Stay Updated / Newsletter */}
-          <section className="space-y-4 lg:flex lg:flex-col lg:items-center lg:text-center">
+          <section className="flex flex-col items-center text-center space-y-6 lg:pt-2">
             <div>
-              <h3 className="text-lg font-bold tracking-tight">Stay Updated</h3>
-              <p className="mt-2 text-sm text-white/90">
+              <h3 className="text-3xl font-medium tracking-tight">Stay Updated</h3>
+              <p className="mt-3 text-base text-white/90">
                 Sign up to hear from us about specials events.
               </p>
             </div>
             <form
               onSubmit={handleSubscribe}
-              className="flex w-full max-w-md overflow-hidden rounded-full bg-white shadow-lg focus-within:ring-2 focus-within:ring-white/30 focus-within:ring-offset-2 focus-within:ring-offset-[#285A7E]"
+              className="relative flex w-full max-w-md items-center rounded-full bg-white p-1.5 shadow-lg focus-within:ring-2 focus-within:ring-white/30 focus-within:ring-offset-2 focus-within:ring-offset-[#285A7E]"
             >
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="min-w-0 flex-1 bg-transparent px-5 py-3 text-[#285A7E] placeholder:text-gray-500 focus:outline-none"
+                className="w-full min-w-0 bg-transparent px-5 py-2 text-[#285A7E] placeholder:text-gray-500 focus:outline-none"
                 aria-label="Email for newsletter"
                 disabled={status === "submitting"}
               />
               <button
                 type="submit"
-                className="shrink-0 bg-[#1e4260] px-5 py-3 font-semibold text-white transition hover:bg-[#183550] focus:outline-none focus:ring-2 focus:ring-white/30 disabled:opacity-70"
+                className="shrink-0 rounded-full bg-[#285A7E] px-6 py-2.5 font-medium text-white transition hover:bg-[#1e4260] focus:outline-none focus:ring-2 focus:ring-white/30 disabled:opacity-70"
                 disabled={status === "submitting"}
               >
                 {status === "submitting" ? "..." : "Subscribe"}
@@ -135,29 +137,33 @@ export default function Footer() {
           </section>
 
           {/* Quick Links */}
-          <section className="space-y-4 lg:flex lg:flex-col lg:items-end">
-            <h3 className="text-lg font-bold tracking-tight">Quick Links</h3>
-            <ul className="flex flex-col gap-2">
-              {QUICK_LINKS.map(({ label, href }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="text-white/95 transition hover:text-white hover:underline"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <section className="space-y-6 lg:justify-self-end">
+            <div className="flex flex-col items-start">
+              <h3 className="text-2xl font-normal tracking-tight text-left">
+                Quick Links
+              </h3>
+              <ul className="mt-6 flex flex-col gap-3 text-left text-white/90">
+                {QUICK_LINKS.map(({ label, href }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="transition hover:text-white hover:underline"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="border-t border-white/20">
-        <div className="mx-auto max-w-[1390px] px-4 py-4 text-center sm:px-6 lg:px-8">
-          <p className="text-sm text-white/70">
-            ©2026 Radnav Solutions. All rights reserved.
+        <div className="mx-auto max-w-[1390px] px-4 py-6 text-center sm:px-6 lg:px-8">
+          <p className="text-sm text-white/80">
+            © 2026 Radnav Solutions. All rights reserved.
           </p>
         </div>
       </div>
