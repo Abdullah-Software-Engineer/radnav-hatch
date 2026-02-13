@@ -42,7 +42,7 @@ export default function KeyBenefits() {
         </header>
 
         {/* Benefits — horizontal line on all screen sizes */}
-        <div className="flex flex-nowrap items-center justify-center overflow-x-auto overflow-y-visible pb-4">
+        <div className="flex flex-nowrap items-center justify-center overflow-hidden">
           {BENEFITS.map(({ text, bgClass, hasDashedOutline }, index) => (
             <div
               key={text}
