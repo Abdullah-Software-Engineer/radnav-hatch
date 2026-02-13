@@ -15,9 +15,9 @@ export default function AboutHero() {
           <div className="grid min-h-0 grid-cols-1 lg:grid-cols-2 lg:min-h-[520px]">
             {/* Left column — text */}
             <div className="flex flex-col justify-center bg-[#F8F8F8] px-6 py-10 sm:px-10 sm:py-14 md:px-12 md:py-16 lg:px-14 lg:py-20">
-              <h1 className="text-[30px] font-bold leading-[1.2] tracking-tight text-[#2F333E] md:text-[30px] lg:text-[48px] xl:text-[48px] xl:leading-[1.15]">
+              <h1 className="text-[30px] font-bold leading-[1.2] tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px] xl:leading-[1.15]">
                 Building stronger radiology teams through{" "}
-                <span className="text-[#2563EB]">trusted staffing solutions.</span>
+                <span className="text-[#2E5D81]">trusted staffing solutions.</span>
               </h1>
               <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-[#6B7280] sm:mt-6 md:text-[16px] lg:text-[16px] xl:text-[18px]">
                 Radnav Solutions is a healthcare staffing partner specializing in
