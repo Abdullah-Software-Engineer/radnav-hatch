@@ -14,14 +14,15 @@ export default function TechnologistsHero() {
           <Image
             src="/for-technology/Mask.webp"
             alt="Radiology technologists and healthcare professionals"
+            
             fill
-            className="object-cover"
+            className="object-fill "
             sizes="(max-width: 1280px) 100vw, 1280px"
             priority
           />
 
           {/* Content — left-aligned */}
-          <div className="relative z-10 flex h-full min-h-[420px] flex-col justify-center px-6 py-14 sm:min-h-[480px] sm:px-10 sm:py-16 md:min-h-[520px] md:max-w-xl md:px-14 md:py-20 lg:min-h-[560px] lg:max-w-2xl lg:px-16 lg:py-24">
+          <div className="relative z-1000 flex h-full min-h-[420px] flex-col justify-center px-6 py-14 sm:min-h-[480px] sm:px-10 sm:py-16 md:min-h-[520px] md:max-w-xl md:px-14 md:py-20 lg:min-h-[560px] lg:max-w-2xl lg:px-16 lg:py-24">
             <h1 className="text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.2]">
               Your Career, Your Terms
             </h1>

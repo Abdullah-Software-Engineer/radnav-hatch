@@ -59,7 +59,7 @@ export default function Header() {
         <nav
           className={`hidden items-center gap-1 rounded-full border px-4 py-2 backdrop-blur-md lg:flex ${
             scrolled
-              ? "border-[#CDDAE2]/40 bg-[white/70] dark:border-[#1B557B] dark:bg-[#CDDAE2]"
+              ? "border-[#000]/40 bg-[white/70] dark:border-[#1B557B] dark:bg-[#CDDAE2]"
               : "border-[#CDDAE2]/50 bg-white/40 dark:border-[#1B557B] dark:bg-[#CDDAE2]"
           }`}
           aria-label="Main navigation"
