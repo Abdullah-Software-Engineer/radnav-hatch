@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useCallback, useEffect } from "react";
 
 const NAV_LINKS = [
@@ -13,10 +14,18 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const closeMenu = useCallback(() => setMobileMenuOpen(false), []);
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -59,24 +68,27 @@ export default function Header() {
         <nav
           className={`hidden items-center gap-1 rounded-full border px-4 py-2 backdrop-blur-md lg:flex ${
             scrolled
-              ? "border-[#000]/40 bg-[white/70] dark:border-[#1B557B] dark:bg-[#CDDAE2]"
-              : "border-[#CDDAE2]/50 bg-white/40 dark:border-[#1B557B] dark:bg-[#CDDAE2]"
+              ? "border-[#CDDAE2]/40 bg-[#CDDAE2] dark:border-[#1B557B] dark:bg-[#CDDAE2]"
+              : "border-[#CDDAE2]/50 bg-[#CDDAE2] dark:border-[#1B557B] dark:bg-[#CDDAE2]"
           }`}
           aria-label="Main navigation"
         >
-          {NAV_LINKS.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2 ${
-                href === "/"
-                  ? "text-[#32709D] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[2px] after:bg-[#32709D]"
-                  : "text-[#212424] hover:text-[#32709D] dark:text-[#212424] dark:hover:text-[#5B9AB8]"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
+          {NAV_LINKS.map(({ label, href }) => {
+            const active = isActive(href);
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2 ${
+                  active
+                    ? "text-[#32709D] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-[2px] after:bg-[#32709D]"
+                    : "text-[#212424] hover:text-[#32709D] dark:text-[#212424] dark:hover:text-[#5B9AB8]"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop CTA */}
@@ -136,21 +148,24 @@ export default function Header() {
           aria-label="Mobile navigation"
         >
           <ul className="flex flex-col gap-1">
-            {NAV_LINKS.map(({ label, href }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={closeMenu}
-                  className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
-                    href === "/"
-                      ? "bg-[#2E5D81]/10 text-[#32709D]"
-                      : "text-[#5B7281] hover:bg-[#2E5D81]/5 hover:text-[#32709D] dark:text-zinc-300 dark:hover:bg-white/5 dark:hover:text-[#5B9AB8]"
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map(({ label, href }) => {
+              const active = isActive(href);
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    onClick={closeMenu}
+                    className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
+                      active
+                        ? "bg-[#2E5D81]/10 text-[#32709D]"
+                        : "text-[#5B7281] hover:bg-[#2E5D81]/5 hover:text-[#32709D] dark:text-zinc-300 dark:hover:bg-white/5 dark:hover:text-[#5B9AB8]"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="mt-4 border-t border-[#8BA3B6]/30 pt-4 dark:border-white/10">
             <Link

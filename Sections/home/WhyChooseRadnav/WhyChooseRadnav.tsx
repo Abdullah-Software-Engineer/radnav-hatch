@@ -39,11 +39,11 @@ export default function WhyChooseRadnav() {
         <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
           <h2
             id="why-choose-heading"
-            className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Why Choose Radnav?
           </h2>
-          <p className="mt-4 text-white/90 text-base sm:text-lg leading-relaxed">
+          <p className="mt-4 text-white/90 text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
             We deliver staffing solutions that set us apart in the healthcare
             industry.
           </p>
@@ -64,10 +64,10 @@ export default function WhyChooseRadnav() {
                   className="h-7 w-7 object-contain"
                 />
               </div>
-              <h3 className="mt-4 text-lg font-bold tracking-tight text-[#171717]">
+              <h3 className="mt-4 text-[20px] font-bold tracking-tight text-[#171717]">
                 {title}
               </h3>
-              <p className="mt-2 text-[#5B7281] text-sm sm:text-base leading-relaxed">
+              <p className="mt-2 text-[#5B7281] text-[14px] leading-relaxed">
                 {description}
               </p>
             </article>

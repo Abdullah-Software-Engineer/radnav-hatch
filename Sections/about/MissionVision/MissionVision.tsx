@@ -12,12 +12,12 @@ export default function MissionVision() {
           <article className="max-w-xl" aria-labelledby="mission-heading">
             <h2
               id="mission-heading"
-              className="text-2xl font-bold tracking-tight text-[#333333] sm:text-3xl"
+              className="text-[30px] font-bold tracking-tight text-[#333333] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
               Our{" "}
               <span className="text-[#2C5282]">Mission</span>
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#333333] sm:mt-5 sm:text-lg">
+            <p className="mt-4 text-[14px] leading-relaxed text-[#333333] sm:mt-5 md:text-[14px] lg:text-[16px] xl:text-[16px]">
               To elevate healthcare delivery by providing ethically driven,
               diverse, and industry-leading radiology staffing solutions. We
               are committed to matching exceptional clinical and technical
@@ -30,12 +30,12 @@ export default function MissionVision() {
           <article className="max-w-xl" aria-labelledby="vision-heading">
             <h2
               id="vision-heading"
-              className="text-2xl font-bold tracking-tight text-[#333333] sm:text-3xl"
+              className="text-[30px] font-bold tracking-tight text-[#333333] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
               Our{" "}
               <span className="text-[#2C5282]">Vision</span>
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#333333] sm:mt-5 sm:text-lg">
+            <p className="mt-4 text-[14px] leading-relaxed text-[#333333] sm:mt-5 md:text-[14px] lg:text-[16px] xl:text-[16px]">
               We envision a healthcare system strengthened by reliable staffing,
               ethical practices and innovative solutions. As we expand our
               footprint nationwide, we remain committed to continuous improvement,

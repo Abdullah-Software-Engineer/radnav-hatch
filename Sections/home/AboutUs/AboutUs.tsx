@@ -32,18 +32,18 @@ export default function AboutUs() {
           <div>
             <h2
               id="about-heading"
-              className="text-2xl font-bold tracking-tight text-[#171717] sm:text-3xl md:text-4xl"
+              className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
               Know More About{" "}
               <span className="text-[#2E5D81]">Radnav Solutions</span>
             </h2>
-            <p className="mt-5 text-[#5B7281] leading-relaxed sm:text-lg">
+            <p className="mt-5 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
               At Radnav Solutions, we bridge the gap between healthcare
               facilities and exceptional radiologic technologists. Our mission
               is to ensure that every facility receives skilled professionals
               who deliver outstanding patient care.
             </p>
-            <p className="mt-4 text-[#5B7281] leading-relaxed sm:text-lg">
+            <p className="mt-4 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
               With years of experience in medical staffing, we understand the
               unique challenges healthcare facilities face. We&apos;re committed
               to providing reliable, efficient, and personalized staffing
@@ -52,13 +52,13 @@ export default function AboutUs() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-lg bg-[#2E5D81] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#2E5D81]/20 transition hover:bg-[#264a6a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-lg bg-[#2E5D81] px-5 py-3 text-[14px] font-semibold text-white shadow-lg shadow-[#2E5D81]/20 transition hover:bg-[#264a6a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
               >
                 Learn More
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-lg border border-[#8BA3B6]/60 bg-white px-5 py-3 text-sm font-semibold text-[#171717] transition hover:bg-[#f8fafc] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
+                className="inline-flex items-center gap-2 rounded-lg border border-[#8BA3B6]/60 bg-white px-5 py-3 text-[14px] font-semibold text-[#171717] transition hover:bg-[#f8fafc] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
               >
                 Our Services
                 <ArrowIcon />
@@ -88,7 +88,7 @@ export default function AboutUs() {
             />
           </article>
           <article className="flex min-h-[280px] flex-col items-center justify-center rounded-xl bg-[#0d9488] px-6 py-8 text-center shadow-sm sm:px-8 sm:py-10 lg:min-h-full lg:h-full">
-            <p className="text-xl font-bold leading-snug text-white sm:text-2xl">
+            <p className="text-[20px] font-bold leading-snug text-white">
               24/7 support
               <br />
               for healthcare
@@ -97,7 +97,7 @@ export default function AboutUs() {
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#2E5D81] shadow-md transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d9488]"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-[16px] font-semibold text-[#2E5D81] shadow-md transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d9488]"
             >
               Contact Now
               <ArrowIcon />

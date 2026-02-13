@@ -91,11 +91,11 @@ export default function WhatWeDo() {
             <div className="absolute left-0 top-0 z-10 p-6 sm:p-8 md:p-10 lg:p-12">
               <h2
                 id="what-we-do-heading"
-                className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl"
+                className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
               >
                 What We Do
               </h2>
-              <p className="mt-3 max-w-md text-base leading-relaxed text-white/95 sm:mt-4 sm:text-lg">
+              <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/95 sm:mt-4 md:text-[14px] lg:text-[16px] xl:text-[16px]">
                 Specialized radiology staffing solutions designed to support care
                 teams and maintain continuity.
               </p>
@@ -113,10 +113,10 @@ export default function WhatWeDo() {
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#1E3A5F] text-white">
                     {icon}
                   </div>
-                  <h3 className="text-base font-bold text-[#1F2937] sm:text-lg">
+                  <h3 className="text-[20px] font-bold text-[#1F2937]">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#4B5563] sm:text-base">
+                  <p className="mt-2 text-[14px] leading-relaxed text-[#4B5563]">
                     {description}
                   </p>
                 </article>

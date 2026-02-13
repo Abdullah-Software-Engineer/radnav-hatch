@@ -150,12 +150,12 @@ export default function WhyTechsLoveUs() {
         <header className="mb-14 text-center sm:mb-16 md:mb-20">
           <h2
             id="why-techs-heading"
-            className="text-2xl font-bold tracking-tight text-[#212529] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#212529] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Why <span className="text-[#1a73e8]">Techs</span> Love Working With
             Us
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-[#6c757d] sm:text-lg md:max-w-2xl md:mx-auto">
+          <p className="mt-5 text-[14px] leading-relaxed text-[#6c757d] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto">
             We treat our technologists like partners, not just placements.
           </p>
         </header>
@@ -169,10 +169,10 @@ export default function WhyTechsLoveUs() {
               <div className="flex shrink-0 h-12 w-12 items-center justify-center rounded-full bg-[#0a588b] border border-[#c0d6ff] text-white">
                 {icon}
               </div>
-              <h3 className="mt-5 text-lg font-bold tracking-tight text-[#212529]">
+              <h3 className="mt-5 text-[20px] font-bold tracking-tight text-[#212529]">
                 {title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#6c757d] sm:text-base">
+              <p className="mt-3 text-[14px] leading-relaxed text-[#6c757d]">
                 {description}
               </p>
             </article>

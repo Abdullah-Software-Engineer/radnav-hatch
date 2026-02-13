@@ -76,12 +76,12 @@ export default function OurServices() {
         <header className="mb-12 max-w-3xl sm:mb-14 md:mb-16">
           <h2
             id="our-services-heading"
-            className="text-2xl font-bold tracking-tight text-[#1F2937] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#1F2937] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Our{" "}
             <span className="text-[#1B557B]">Services</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#4B5563] sm:text-xl lg:w-167">
+          <p className="mt-4 text-[14px] leading-relaxed text-[#4B5563] md:text-[14px] lg:text-[16px] xl:text-[16px] lg:w-167">
             Comprehensive radiology staffing and imaging support designed to
             adapt to your facility&apos;s needs.
           </p>
@@ -97,10 +97,10 @@ export default function OurServices() {
               <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1E3A5F] text-white sm:mb-6 sm:h-14 sm:w-14">
                 {icon}
               </div>
-              <h3 className="text-lg font-bold tracking-tight text-[#1F2937] sm:text-xl">
+              <h3 className="text-[20px] font-bold tracking-tight text-[#1F2937]">
                 {title}
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#4B5563] sm:mt-4 sm:text-base">
+              <p className="mt-3 flex-1 text-[14px] leading-relaxed text-[#4B5563] sm:mt-4">
                 {description}
               </p>
             </article>
