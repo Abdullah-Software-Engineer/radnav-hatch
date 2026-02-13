@@ -95,33 +95,36 @@ export default function WhyClinicsChooseRadnav() {
       aria-labelledby="why-clinics-choose-heading"
     >
       <div className="mx-auto max-w-[1390px]">
-        <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
+        <header className="mb-14 text-center sm:mb-16 md:mb-20">
           <h2
             id="why-clinics-choose-heading"
             className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
-            Why Hospitals Choose RadNav
+            Why <span className="text-[#2E5D81]">Hospitals</span> Choose RadNav
           </h2>
-          <p className="mt-4 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
-            We understand the critical nature of radiology departments. That&apos;s why we deliver quality staffing solutions, fast.
+          <p className="mt-5 text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto">
+            We understand the critical nature of radiology departments. That&apos;s
+            why we deliver quality staffing solutions, fast.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {FEATURES.map(({ icon, title, description }) => (
             <article
               key={title}
-              className="group flex flex-col rounded-xl border border-[#E5E7EB] bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="flex items-start rounded-2xl border border-[#BFD8E8] bg-white p-6 shadow-sm hover:shadow-md transition-shadow sm:p-8"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1a4d6f] text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2E5D81] text-white">
                 {icon}
               </div>
-              <h3 className="mt-4 text-[20px] font-bold tracking-tight text-[#171717]">
-                {title}
-              </h3>
-              <p className="mt-2 text-[#5B7281] text-[14px] leading-relaxed">
-                {description}
-              </p>
+              <div className="ml-6">
+                <h3 className="text-[18px] font-bold tracking-tight text-[#171717] sm:text-[20px]">
+                  {title}
+                </h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-[#5B7281] sm:text-[15px]">
+                  {description}
+                </p>
+              </div>
             </article>
           ))}
         </div>

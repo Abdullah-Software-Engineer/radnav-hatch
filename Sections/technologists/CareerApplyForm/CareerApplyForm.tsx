@@ -1,123 +1,135 @@
 "use client";
 
+import { useState } from "react";
+
 export default function CareerApplyForm() {
+  const [fileName, setFileName] = useState<string>("");
+
   return (
     <section
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="career-form-heading"
     >
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-[1390px]">
         <header className="mb-12 text-center sm:mb-16">
           <h2
             id="career-form-heading"
-            className="text-2xl font-bold tracking-tight text-[#2A3852] sm:text-3xl md:text-4xl"
+            className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[36px] lg:text-[48px]"
           >
-            Ready to Take Control of Your Career?
+            Ready to Take <span className="text-[#2E5D81]">Control of Your Career?</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#555555] sm:text-lg">
+          <p className="mt-4 text-[16px] leading-relaxed text-[#5B7281] sm:text-[18px]">
             Join a pool of radiology technologists at RadNav.
           </p>
         </header>
 
         <form
-          className="space-y-8"
+          className="space-y-6"
           onSubmit={(e) => e.preventDefault()}
           noValidate
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div className="space-y-2">
-              <label
-                htmlFor="career-name"
-                className="block text-sm font-medium text-[#333333]"
-              >
-                Name
-              </label>
-              <input
-                id="career-name"
-                type="text"
-                name="name"
-                placeholder="Enter your full name"
-                className="w-full rounded-md border border-[#D1D9E0] bg-white px-4 py-3.5 text-[#333333] placeholder:text-[#A9A9A9] focus:border-[#286B91] focus:outline-none focus:ring-1 focus:ring-[#286B91]"
-              />
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="space-y-2">
+                <label
+                  htmlFor="career-name"
+                  className="block text-[14px] font-medium text-[#171717]"
+                >
+                  Name
+                </label>
+                <input
+                  id="career-name"
+                  type="text"
+                  name="name"
+                  placeholder="Enter your full name"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[#171717] placeholder:text-gray-400 focus:border-[#2E5D81] focus:outline-none focus:ring-1 focus:ring-[#2E5D81]"
+                />
+              </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="career-email"
+                  className="block text-[14px] font-medium text-[#171717]"
+                >
+                  Email
+                </label>
+                <input
+                  id="career-email"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[#171717] placeholder:text-gray-400 focus:border-[#2E5D81] focus:outline-none focus:ring-1 focus:ring-[#2E5D81]"
+                />
+              </div>
             </div>
-            <div className="space-y-2">
-              <label
-                htmlFor="career-email"
-                className="block text-sm font-medium text-[#333333]"
-              >
-                Email
-              </label>
-              <input
-                id="career-email"
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                className="w-full rounded-md border border-[#D1D9E0] bg-white px-4 py-3.5 text-[#333333] placeholder:text-[#A9A9A9] focus:border-[#286B91] focus:outline-none focus:ring-1 focus:ring-[#286B91]"
-              />
-            </div>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="space-y-2">
+                <label
+                  htmlFor="career-phone"
+                  className="block text-[14px] font-medium text-[#171717]"
+                >
+                  Contact number
+                </label>
+                <input
+                  id="career-phone"
+                  type="tel"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[#171717] placeholder:text-gray-400 focus:border-[#2E5D81] focus:outline-none focus:ring-1 focus:ring-[#2E5D81]"
+                />
+              </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="career-location"
+                  className="block text-[14px] font-medium text-[#171717]"
+                >
+                  City, State
+                </label>
+                <input
+                  id="career-location"
+                  type="text"
+                  name="cityState"
+                  placeholder="Enter your City and State"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-[#171717] placeholder:text-gray-400 focus:border-[#2E5D81] focus:outline-none focus:ring-1 focus:ring-[#2E5D81]"
+                />
+              </div>
+            </div>
+
             <div className="space-y-2">
               <label
-                htmlFor="career-phone"
-                className="block text-sm font-medium text-[#333333]"
+                htmlFor="career-resume"
+                className="block text-[14px] font-medium text-[#171717]"
               >
-                Contact number
+                Upload resume
               </label>
-              <input
-                id="career-phone"
-                type="tel"
-                name="phone"
-                placeholder="Enter your phone number"
-                className="w-full rounded-md border border-[#D1D9E0] bg-white px-4 py-3.5 text-[#333333] placeholder:text-[#A9A9A9] focus:border-[#286B91] focus:outline-none focus:ring-1 focus:ring-[#286B91]"
-              />
+              <div className="relative">
+                <input
+                  id="career-resume"
+                  type="file"
+                  name="resume"
+                  accept=".pdf"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    setFileName(file ? file.name : "");
+                  }}
+                  className="w-full cursor-pointer rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-[#171717] file:mr-4 file:rounded file:border-0 file:bg-transparent file:px-0 file:py-0 file:text-sm file:font-medium file:text-transparent file:cursor-pointer focus:border-[#2E5D81] focus:outline-none focus:ring-1 focus:ring-[#2E5D81] [&::file-selector-button]:hidden"
+                />
+                {!fileName && (
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-400">
+                    Upload your resume (.pdf)
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="space-y-2">
-              <label
-                htmlFor="career-location"
-                className="block text-sm font-medium text-[#333333]"
+
+            <div className="pt-4">
+              <button
+                type="submit"
+                className="w-full rounded-lg bg-[#2E5D81] py-4 text-[16px] font-semibold text-white transition hover:bg-[#234b6b] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] focus:ring-offset-2"
               >
-                City, State
-              </label>
-              <input
-                id="career-location"
-                type="text"
-                name="cityState"
-                placeholder="Enter your City and State"
-                className="w-full rounded-md border border-[#D1D9E0] bg-white px-4 py-3.5 text-[#333333] placeholder:text-[#A9A9A9] focus:border-[#286B91] focus:outline-none focus:ring-1 focus:ring-[#286B91]"
-              />
+                Submit Application
+              </button>
             </div>
-          </div>
-
-          <div className="space-y-2">
-            <label
-              htmlFor="career-resume"
-              className="block text-sm font-medium text-[#333333]"
-            >
-              Upload resume
-            </label>
-            <input
-              id="career-resume"
-              type="file"
-              name="resume"
-              accept=".pdf"
-              className="w-full rounded-md border border-[#D1D9E0] bg-white px-4 py-3.5 text-[#333333] file:mr-4 file:rounded file:border-0 file:bg-[#286B91] file:px-4 file:py-2 file:text-sm file:font-medium file:text-white file:cursor-pointer focus:border-[#286B91] focus:outline-none focus:ring-1 focus:ring-[#286B91]"
-            />
-            <p className="text-sm text-[#A9A9A9]">
-              Upload your resume (.pdf)
-            </p>
-          </div>
-
-          <div className="pt-4">
-            <button
-              type="submit"
-              className="w-full rounded-md bg-[#286B91] py-4 text-base font-medium text-white transition hover:bg-[#215a7a] focus:outline-none focus:ring-2 focus:ring-[#286B91] focus:ring-offset-2"
-            >
-              Submit Application
-            </button>
-          </div>
-        </form>
+          </form>
       </div>
     </section>
   );

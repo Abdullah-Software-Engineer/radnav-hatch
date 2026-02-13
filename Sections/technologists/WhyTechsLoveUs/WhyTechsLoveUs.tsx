@@ -146,35 +146,37 @@ export default function WhyTechsLoveUs() {
       className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
       aria-labelledby="why-techs-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-[1390px]">
         <header className="mb-14 text-center sm:mb-16 md:mb-20">
           <h2
             id="why-techs-heading"
-            className="text-[30px] font-bold tracking-tight text-[#212529] md:text-[30px] lg:text-[48px] xl:text-[48px]"
+            className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
-            Why <span className="text-[#1a73e8]">Techs</span> Love Working With
+            Why <span className="text-[#2E5D81]">Techs</span> Love Working With
             Us
           </h2>
-          <p className="mt-5 text-[14px] leading-relaxed text-[#6c757d] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto">
+          <p className="mt-5 text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto">
             We treat our technologists like partners, not just placements.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {CARDS.map(({ title, description, icon }) => (
             <article
               key={title}
-              className="flex flex-col rounded-2xl border border-[#e0e7ff] bg-white p-8 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.08),0_2px_4px_-2px_rgba(0,0,0,0.06)] text-left"
+              className="flex items-start rounded-2xl border border-[#BFD8E8] bg-white p-6 shadow-sm hover:shadow-md transition-shadow sm:p-8"
             >
-              <div className="flex shrink-0 h-12 w-12 items-center justify-center rounded-full bg-[#0a588b] border border-[#c0d6ff] text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2E5D81] text-white">
                 {icon}
               </div>
-              <h3 className="mt-5 text-[20px] font-bold tracking-tight text-[#212529]">
-                {title}
-              </h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-[#6c757d]">
-                {description}
-              </p>
+              <div className="ml-6">
+                <h3 className="text-[18px] font-bold tracking-tight text-[#171717] sm:text-[20px]">
+                  {title}
+                </h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-[#5B7281] sm:text-[15px]">
+                  {description}
+                </p>
+              </div>
             </article>
           ))}
         </div>

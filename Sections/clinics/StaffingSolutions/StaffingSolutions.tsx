@@ -12,7 +12,7 @@ const MODALITIES = [
 export default function StaffingSolutions() {
   return (
     <section
-      className="relative w-full bg-[#FAFAFA] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      className="relative w-full bg-white px-4 py-8 sm:px-6 sm:py-10 md:py-12 lg:px-8 lg:py-14"
       aria-labelledby="staffing-solutions-heading"
     >
       <div className="mx-auto max-w-[1390px]">
@@ -21,7 +21,7 @@ export default function StaffingSolutions() {
             id="staffing-solutions-heading"
             className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
-            <span className="text-[#1a4d6f]">Staffing Solutions</span>{" "}
+            <span className="text-[#2E5D81]">Staffing Solutions</span>{" "}
             <span className="text-[#171717]">We Provide</span>
           </h2>
           <p className="mt-4 text-[#5B7281] text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
@@ -29,29 +29,27 @@ export default function StaffingSolutions() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {MODALITIES.map((modality) => (
             <article
               key={modality}
-              className="flex items-center gap-4 rounded-lg border border-[#E0E7FF] bg-white p-4 sm:p-5 shadow-sm transition-shadow hover:shadow-md"
+              className="flex items-center gap-4 rounded-lg border border-[#BFD8E8] bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#E0E7FF]">
-                <svg
-                  className="h-5 w-5 text-[#1a4d6f]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-base font-medium text-[#171717] sm:text-lg">
+              <svg
+                className="h-6 w-6 shrink-0 text-[#2E5D81]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <h3 className="text-[16px] font-medium text-[#171717]">
                 {modality}
               </h3>
             </article>

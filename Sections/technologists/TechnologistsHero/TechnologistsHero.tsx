@@ -1,57 +1,67 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function TechnologistsHero() {
   return (
     <section
-      className="relative w-full bg-white px-4 pt-24 pb-14 sm:px-6 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24 lg:px-8 lg:pt-36 lg:pb-28"
+      className="relative w-full pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-20 lg:py-24"
       aria-label="Technologists hero"
     >
-      <div className="mx-auto w-full max-w-[1390px]">
-        {/* Rounded container with bg image + overlay */}
-        <div className="relative overflow-hidden rounded-[50px] min-h-[420px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[560px]">
-          {/* Background image */}
+      {/* Full Width Container - 20px margins, 20px border radius (contains image) */}
+      <div className="relative mx-5 overflow-hidden rounded-[20px] sm:mx-5 md:mx-5 lg:mx-5">
+        {/* Background image - full width, absolute to cover content height */}
+        <div className="absolute inset-0 h-full w-full">
           <Image
             src="/for-technology/Mask.webp"
             alt="Radiology technologists and healthcare professionals"
-            
             fill
-            className="object-fill "
-            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover"
+            sizes="100vw"
             priority
           />
+        </div>
 
-          {/* Content — left-aligned */}
-          <div className="relative z-1000 flex h-full min-h-[420px] flex-col justify-center px-6 py-14 sm:min-h-[480px] sm:px-10 sm:py-16 md:min-h-[520px] md:max-w-xl md:px-14 md:py-20 lg:min-h-[560px] lg:max-w-2xl lg:px-16 lg:py-24">
-            <h1 className="text-[30px] font-bold leading-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px] lg:leading-[1.2]">
-              Your Career, Your Terms
-            </h1>
-            <p className="mt-4 text-[16px] leading-relaxed text-white/95 sm:mt-5 md:text-[16px] lg:text-[16px] xl:text-[18px]">
-              Join a network of top radiology professionals. Whether you&apos;re
-              looking for flexibility, better pay, or your next adventure, we&apos;ve
-              got opportunities waiting for you.
-            </p>
-            <div className="mt-8 sm:mt-10">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[14px] font-semibold text-[#1a4d6f] shadow-md transition hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:px-8 sm:py-4 lg:text-[14px] xl:text-[16px]"
-              >
-                Apply Now
-                <svg
-                  className="h-4 w-4 shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden
+        {/* Content Container - 1390px max-width, no left padding (contains title, subtitle) */}
+        <div className="relative z-10">
+          <div className="mx-auto w-full max-w-[1380px] pl-4 pr-4 sm:pl-0 sm:pr-6 lg:pr-8">
+            <div className="flex min-h-[400px] flex-col justify-center py-8 sm:min-h-[450px] sm:py-10 md:min-h-[500px] md:py-12 lg:min-h-[550px]">
+              {/* Title and subtitle — top-left of the 1390px container */}
+              <div className="pl-4 sm:pl-6 lg:pl-8">
+                <h1
+                  className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 17L17 7M17 7H7M17 7v10"
-                  />
-                </svg>
-              </Link>
+                  Your Career, Your Terms
+                </h1>
+                <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/95 sm:mt-4 md:text-[14px] lg:text-[16px] xl:text-[16px]">
+                  Join a network of top radiology professionals. Whether you&apos;re
+                  looking for flexibility, better pay, or your next adventure, we&apos;ve
+                  got opportunities waiting for you.
+                </p>
+                <div className="mt-8 sm:mt-10">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[14px] font-semibold text-[#2E5D81] shadow-md transition hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:px-8 sm:py-4 lg:text-[14px] xl:text-[16px]"
+                  >
+                    Apply Now
+                    <svg
+                      className="h-4 w-4 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M7 17L17 7M17 7H7M17 7v10"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
