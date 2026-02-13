@@ -18,12 +18,10 @@ export default function ContactHero() {
             alt="Professional working at desk"
             width={1280}
             height={800}
-            className="absolute inset-0 h-full w-full object-cover blur-sm"
+            className="absolute inset-0 h-full w-full object-cover "
             priority
           />
           
-          {/* Dark blue overlay */}
-          <div className="absolute inset-0 bg-[#1a4d6f]/80" />
 
           {/* Content — centered */}
           <div className="relative z-10 flex h-full min-h-[420px] flex-col items-center justify-center px-6 py-14 text-center sm:min-h-[480px] sm:px-10 sm:py-16 md:min-h-[520px] md:px-14 md:py-20 lg:min-h-[560px] lg:px-16 lg:py-24">
