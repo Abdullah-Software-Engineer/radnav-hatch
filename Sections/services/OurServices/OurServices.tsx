@@ -68,20 +68,20 @@ const SERVICES = [
 export default function OurServices() {
   return (
     <section
-      className="relative w-full bg-[#FAFAFA] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      className="relative w-full bg-white pt-[30px] pb-[40px]"
       aria-labelledby="our-services-heading"
     >
-      <div className="mx-auto max-w-[1390px]">
+      <div className="mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
         {/* Header — left-aligned */}
         <header className="mb-12 max-w-3xl sm:mb-14 md:mb-16">
           <h2
             id="our-services-heading"
-            className="text-[30px] font-bold tracking-tight text-[#1F2937] md:text-[30px] lg:text-[48px] xl:text-[48px]"
+            className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
           >
             Our{" "}
-            <span className="text-[#1B557B]">Services</span>
+            <span className="text-[#2E5D81]">Services</span>
           </h2>
-          <p className="mt-4 text-[14px] leading-relaxed text-[#4B5563] md:text-[14px] lg:text-[16px] xl:text-[16px] lg:w-167">
+          <p className="mt-4 text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px]">
             Comprehensive radiology staffing and imaging support designed to
             adapt to your facility&apos;s needs.
           </p>
@@ -92,15 +92,15 @@ export default function OurServices() {
           {SERVICES.map(({ title, description, icon }) => (
             <article
               key={title}
-              className="flex flex-col rounded-2xl border border-[#1B557B] bg-white p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.04),0_6px_16px_-2px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.08)] sm:p-8"
+              className="flex flex-col rounded-2xl border border-[#2E5D81] bg-white p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.04),0_6px_16px_-2px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.08)] sm:p-8"
             >
-              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1E3A5F] text-white sm:mb-6 sm:h-14 sm:w-14">
+              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2E5D81] text-white sm:mb-6 sm:h-14 sm:w-14">
                 {icon}
               </div>
-              <h3 className="text-[20px] font-bold tracking-tight text-[#1F2937]">
+              <h3 className="text-[20px] font-bold tracking-tight text-[#171717]">
                 {title}
               </h3>
-              <p className="mt-3 flex-1 text-[14px] leading-relaxed text-[#4B5563] sm:mt-4">
+              <p className="mt-3 flex-1 text-[14px] leading-relaxed text-[#5B7281] sm:mt-4">
                 {description}
               </p>
             </article>
