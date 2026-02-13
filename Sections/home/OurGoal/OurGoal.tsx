@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OurGoal() {
   return (
-    <section className="relative w-full bg-white pt-8 pb-16 sm:pt-10 sm:pb-20 md:pt-12 md:pb-24 lg:pt-14 lg:pb-28">
+    <section className="relative w-full bg-white pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-12 md:pb-12 lg:pt-14 lg:pb-14">
       <div className="mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="mx-auto mb-6 max-w-3xl text-center sm:mb-8 md:mb-10">
