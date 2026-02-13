@@ -76,7 +76,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1390px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-12">
           {/* Address */}
-          <section className="space-y-6">
+          <section className="space-y-6 order-1 lg:order-1">
             <h3 className="text-2xl font-normal tracking-tight">Address</h3>
             <div className="space-y-4 text-white/90">
               <address className="not-italic leading-relaxed">
@@ -103,7 +103,7 @@ export default function Footer() {
           </section>
 
           {/* Stay Updated / Newsletter */}
-          <section className="flex flex-col items-center text-center space-y-6 lg:pt-2">
+          <section className="flex flex-col items-center text-center space-y-6 lg:pt-2 order-3 lg:order-2">
             <div>
               <h3 className="text-3xl font-medium tracking-tight">Stay Updated</h3>
               <p className="mt-3 text-base text-white/90">
@@ -137,7 +137,7 @@ export default function Footer() {
           </section>
 
           {/* Quick Links */}
-          <section className="space-y-6 lg:justify-self-end">
+          <section className="space-y-6 lg:justify-self-end order-2 lg:order-3">
             <div className="flex flex-col items-start">
               <h3 className="text-2xl font-normal tracking-tight text-left">
                 Quick Links

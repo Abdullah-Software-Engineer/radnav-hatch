@@ -17,8 +17,37 @@ export default function OurGoal() {
           </p>
         </header>
 
-        {/* Diagram Container */}
-        <div className="relative mx-auto aspect-[16/9] w-full -mt-20 sm:-mt-10 md:-mt-12">
+        {/* Mobile View (Grid) */}
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:hidden">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+            <span className="mb-3 block text-4xl font-bold text-[#E5E7EB]">01</span>
+            <p className="text-sm font-medium leading-relaxed text-[#333333] sm:text-base">
+              Bridge the gap between healthcare facilities and qualified
+              technologists.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+            <span className="mb-3 block text-4xl font-bold text-[#E5E7EB]">02</span>
+            <p className="text-sm font-medium leading-relaxed text-[#333333] sm:text-base">
+              Continuously improve our processes to deliver exceptional service.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+            <span className="mb-3 block text-4xl font-bold text-[#E5E7EB]">03</span>
+            <p className="text-sm font-medium leading-relaxed text-[#333333] sm:text-base">
+              Maintain the highest standards of professional credentialing.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+            <span className="mb-3 block text-4xl font-bold text-[#E5E7EB]">04</span>
+            <p className="text-sm font-medium leading-relaxed text-[#333333] sm:text-base">
+              Build lasting partnerships with facilities and professionals alike.
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop View (Diagram) */}
+        <div className="relative mx-auto hidden aspect-[16/9] w-full -mt-12 lg:block">
           {/* Background Image (Diagram) */}
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
