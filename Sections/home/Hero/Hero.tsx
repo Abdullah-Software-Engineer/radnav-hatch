@@ -5,9 +5,10 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      className="relative w-full bg-white pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-20 lg:pt-36 lg:pb-24"
+      className="relative w-full bg-white pt-32 pb-12 sm:pt-32 sm:pb-16 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24"
       aria-label="Hero"
     >
+      {/* Content Container - 1390px max-width, with global padding */}
       <div className="mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
         {/* Top: headline + paragraph — responsive two-column / stacked */}
         <div className="grid gap-8 lg:grid-cols-[1fr_minmax(280px,400px)] lg:gap-12 xl:gap-16 lg:items-end">
@@ -21,15 +22,18 @@ export default function Hero() {
             Connecting hospitals and clinics with experienced radiology technologists when and where they&apos;re needed.
           </p>
         </div>
+      </div>
 
-        {/* Single hero image */}
-        <div className="relative mt-10 sm:mt-12 md:mt-14 lg:mt-16 w-full overflow-hidden rounded-xl bg-[#f1f5f9] shadow-md aspect-16/10 sm:aspect-video">
+      {/* Full Width Container - below content container */}
+      <div className="w-full mt-10 sm:mt-12 md:mt-14 lg:mt-16">
+        {/* Image Container - 20px margins on all sides, 20px border radius */}
+        <div className="relative mx-5 sm:mx-5 md:mx-5 lg:mx-5 overflow-hidden rounded-[20px] bg-[#f1f5f9] shadow-md aspect-16/10 sm:aspect-video">
           <Image
             src="/home/hero.webp"
             alt="Radnav Solutions — connecting healthcare with qualified radiology technologists"
             fill
             className="object-cover"
-            sizes="(max-width: 1280px) 100vw, 1280px"
+            sizes="100vw"
             priority
           />
         </div>
