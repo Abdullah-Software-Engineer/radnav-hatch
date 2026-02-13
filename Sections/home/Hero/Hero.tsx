@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      className="relative w-full bg-white pt-32 pb-12 sm:pt-32 sm:pb-16 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24"
+      className="relative w-full bg-white pt-32 sm:pt-32 md:pt-36 lg:pt-40 pb-5"
       aria-label="Hero"
     >
       {/* Content Container - 1390px max-width, with global padding */}
@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       {/* Full Width Container - below content container */}
-      <div className="w-full mt-10 sm:mt-12 md:mt-14 lg:mt-16">
+      <div className="w-full mt-5">
         {/* Image Container - 20px margins on all sides, 20px border radius */}
         <div className="relative mx-5 sm:mx-5 md:mx-5 lg:mx-5 overflow-hidden rounded-[20px] bg-[#f1f5f9] shadow-md aspect-16/10 sm:aspect-video">
           <Image
