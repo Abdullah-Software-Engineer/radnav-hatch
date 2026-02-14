@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function MissionVision() {
   return (
     <section
@@ -9,7 +11,14 @@ export default function MissionVision() {
       <div className="mx-auto max-w-[1390px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           {/* Our Mission */}
-          <article className="max-w-xl" aria-labelledby="mission-heading">
+          <motion.article
+            className="max-w-xl"
+            aria-labelledby="mission-heading"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h2
               id="mission-heading"
               className="text-[30px] font-bold tracking-tight text-[#333333] md:text-[30px] lg:text-[48px] xl:text-[48px]"
@@ -24,10 +33,17 @@ export default function MissionVision() {
               talent with healthcare organizations that value quality, efficiency,
               and patient-centered care.
             </p>
-          </article>
+          </motion.article>
 
           {/* Our Vision */}
-          <article className="max-w-xl" aria-labelledby="vision-heading">
+          <motion.article
+            className="max-w-xl"
+            aria-labelledby="vision-heading"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h2
               id="vision-heading"
               className="text-[30px] font-bold tracking-tight text-[#333333] md:text-[30px] lg:text-[48px] xl:text-[48px]"
@@ -42,7 +58,7 @@ export default function MissionVision() {
               diversity and advancing healthcare communities through smarter
               workforce strategies.
             </p>
-          </article>
+          </motion.article>
         </div>
       </div>
     </section>

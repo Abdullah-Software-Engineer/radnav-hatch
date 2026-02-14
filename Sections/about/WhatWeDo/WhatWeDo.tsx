@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { staggerContainer, cardAnimation } from "../../../app/utils/animations";
 
 const CARDS = [
   {
@@ -93,25 +95,43 @@ export default function WhatWeDo() {
             <div className="flex flex-col justify-between gap-10 py-8 sm:gap-12 sm:py-10 md:min-h-[500px] md:py-12 lg:min-h-[550px]">
               {/* Title and subtitle — top-left of the container */}
               <div>
-                <h2
+                <motion.h2
                   id="what-we-do-heading"
                   className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 >
                   What We Do
-                </h2>
-                <p className="mt-3 max-w-md text-[14px] leading-relaxed text-white/95 sm:mt-4 md:text-[14px] lg:text-[16px] xl:text-[16px]">
+                </motion.h2>
+                <motion.p
+                  className="mt-3 max-w-md text-[14px] leading-relaxed text-white/95 sm:mt-4 md:text-[14px] lg:text-[16px] xl:text-[16px]"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                >
                   Specialized radiology staffing solutions designed to support care
                   teams and maintain continuity.
-                </p>
+                </motion.p>
               </div>
 
               {/* White cards — at bottom of the container, properly spaced */}
               <div className="w-full">
-                <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3 lg:gap-8">
+                <motion.div
+                  className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3 lg:gap-8"
+                  variants={staggerContainer}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
                   {CARDS.map(({ title, description, icon }) => (
-                    <article
+                    <motion.article
                       key={title}
-                      className="group flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 transition-all duration-300 hover:shadow-xl hover:shadow-gray-900/25 hover:-translate-y-2 hover:scale-[1.02] sm:p-7 md:p-6 lg:p-7"
+                      className="group flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 transition-all duration-300 hover:shadow-xl hover:shadow-gray-900/25 sm:p-7 md:p-6 lg:p-7"
+                      variants={cardAnimation}
+                      whileHover={{ y: -8, scale: 1.02 }}
                     >
                       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#2E5D81] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1f405a] group-hover:rotate-3">
                         <div className="transition-transform duration-300 group-hover:scale-110">
@@ -124,9 +144,9 @@ export default function WhatWeDo() {
                       <p className="mt-2 text-[14px] leading-relaxed text-[#5B7281]">
                         {description}
                       </p>
-                    </article>
+                    </motion.article>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

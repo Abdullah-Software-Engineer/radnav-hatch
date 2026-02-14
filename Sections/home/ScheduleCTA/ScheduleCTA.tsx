@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { AnimatedLink } from "../../../app/utils/animations";
 
 export default function ScheduleCTA() {
   return (
@@ -26,20 +28,31 @@ export default function ScheduleCTA() {
         
           {/* Content */}
           <div className="relative z-10 flex flex-col items-center justify-center px-6 py-14 text-center sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-20 lg:py-24">
-            <h2
+            <motion.h2
               id="schedule-cta-heading"
               className="max-w-4xl text-[22px] leading-snug text-white sm:text-[26px] md:text-[30px] lg:text-[48px] xl:text-[48px] md:leading-snug"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
               Ease workload pressure and maintain high-quality care with expert
               radiology navigators built to support your team.
-            </h2>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#38BDF8] px-6 py-4 text-[14px] font-semibold text-white shadow-lg transition hover:bg-[#0EA5E9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-black/30 sm:mt-10 sm:px-8 sm:py-4"
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              Schedule a conversation today
-              <span aria-hidden>→</span>
-            </Link>
+              <AnimatedLink
+                href="/contact"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#38BDF8] px-6 py-4 text-[14px] font-semibold text-white shadow-lg transition hover:bg-[#0EA5E9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-2 focus-visible:ring-offset-black/30 sm:mt-10 sm:px-8 sm:py-4"
+              >
+                Schedule a conversation today
+                <span aria-hidden>→</span>
+              </AnimatedLink>
+            </motion.div>
           </div>
         </div>
       </div>

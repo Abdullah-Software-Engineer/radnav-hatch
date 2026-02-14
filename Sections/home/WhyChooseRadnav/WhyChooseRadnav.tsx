@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { staggerContainer, cardAnimation } from "../../../app/utils/animations";
 
 const CARDS = [
   {
@@ -51,23 +53,41 @@ export default function WhyChooseRadnav() {
         {/* Content with relative positioning */}
         <div className="relative z-10 mx-auto max-w-[1390px] px-4 sm:px-6 lg:px-8">
           <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 md:mb-16">
-            <h2
+            <motion.h2
               id="why-choose-heading"
               className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               Why Choose Radnav?
-            </h2>
-            <p className="mt-4 text-white/90 text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed">
+            </motion.h2>
+            <motion.p
+              className="mt-4 text-white/90 text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
               We deliver staffing solutions that set us apart in the healthcare
               industry.
-            </p>
+            </motion.p>
           </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
-            {CARDS.map(({ icon, title, description }) => (
-              <article
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {CARDS.map(({ icon, title, description }, index) => (
+              <motion.article
                 key={title}
-                className="group flex flex-col items-center text-center rounded-xl bg-white p-6 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-2 hover:scale-[1.02]"
+                className="group flex flex-col items-center text-center rounded-xl bg-white p-6 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-xl hover:shadow-black/20"
+                variants={cardAnimation}
+                whileHover={{ y: -8, scale: 1.02 }}
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-[#214E6E] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <Image
@@ -84,9 +104,9 @@ export default function WhyChooseRadnav() {
                 <p className="mt-2 text-[#5B7281] text-[14px] leading-relaxed">
                   {description}
                 </p>
-              </article>
+              </motion.article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

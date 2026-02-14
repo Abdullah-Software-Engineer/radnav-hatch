@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { AnimatedButton } from "../../../app/utils/animations";
 
 function EnvelopeIcon({ className }: { className?: string }) {
   return (
@@ -193,13 +195,13 @@ export default function GetInTouch() {
                 </div>
 
                 <div className="pt-2">
-                  <button
+                  <AnimatedButton
                     type="submit"
                     disabled={status === "submitting"}
                     className="w-full rounded-lg bg-[#2E5D81] px-6 py-3 text-[16px] font-semibold text-white transition hover:bg-[#234b6b] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] focus:ring-offset-2 disabled:opacity-70 sm:w-auto sm:px-8 sm:py-3.5"
                   >
                     {status === "submitting" ? "Sending..." : "Send Message"}
-                  </button>
+                  </AnimatedButton>
                 </div>
                 {status === "done" && (
                   <p className="text-sm text-green-600">

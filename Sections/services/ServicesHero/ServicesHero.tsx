@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { AnimatedLink } from "../../../app/utils/animations";
 
 export default function ServicesHero() {
   return (
@@ -72,15 +76,30 @@ export default function ServicesHero() {
           />
           
           <div className="relative z-10 mx-auto max-w-3xl">
-            <h1 className="text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.2]">
+            <motion.h1
+              className="text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.2]"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            >
               Reliable Radiology Staffing, Built for Modern Healthcare
-            </h1>
-            <p className="mt-4 text-base leading-relaxed text-white/95 sm:mt-5 sm:text-lg md:text-xl">
+            </motion.h1>
+            <motion.p
+              className="mt-4 text-base leading-relaxed text-white/95 sm:mt-5 sm:text-lg md:text-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
               Trusted radiology professionals and smart workforce solutions that
               keep your facility fully staffed and focused on patient care.
-            </p>
-            <div className="mt-8 sm:mt-10">
-              <Link
+            </motion.p>
+            <motion.div
+              className="mt-8 sm:mt-10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <AnimatedLink
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-[#1a4d6f] shadow-md transition hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent sm:px-8 sm:py-4"
               >
@@ -99,8 +118,8 @@ export default function ServicesHero() {
                     d="M7 17L17 7M17 7H7M17 7v10"
                   />
                 </svg>
-              </Link>
-            </div>
+              </AnimatedLink>
+            </motion.div>
           </div>
         </div>
       </div>

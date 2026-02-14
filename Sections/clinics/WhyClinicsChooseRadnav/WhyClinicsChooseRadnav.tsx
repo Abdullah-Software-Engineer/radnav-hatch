@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { staggerContainer, cardAnimation } from "../../../app/utils/animations";
+
 const FEATURES = [
   {
     icon: (
@@ -96,23 +99,41 @@ export default function WhyClinicsChooseRadnav() {
     >
       <div className="mx-auto max-w-[1390px]">
         <header className="mb-14 text-center sm:mb-16 md:mb-20">
-          <h2
+          <motion.h2
             id="why-clinics-choose-heading"
             className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             Why <span className="text-[#2E5D81]">Hospitals</span> Choose RadNav
-          </h2>
-          <p className="mt-5 text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto">
+          </motion.h2>
+          <motion.p
+            className="mt-5 text-[14px] leading-relaxed text-[#5B7281] md:text-[14px] lg:text-[16px] xl:text-[16px] md:max-w-2xl md:mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             We understand the critical nature of radiology departments. That&apos;s
             why we deliver quality staffing solutions, fast.
-          </p>
+          </motion.p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {FEATURES.map(({ icon, title, description }) => (
-            <article
+            <motion.article
               key={title}
-              className="group flex items-start rounded-2xl border border-[#BFD8E8] bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/10 hover:-translate-y-1 hover:scale-[1.01] hover:border-[#2E5D81] sm:p-8"
+              className="group flex items-start rounded-2xl border border-[#BFD8E8] bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/10 hover:border-[#2E5D81] sm:p-8"
+              variants={cardAnimation}
+              whileHover={{ y: -4, scale: 1.01 }}
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2E5D81] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1f405a]">
                 <div className="transition-transform duration-300 group-hover:rotate-6">
@@ -127,9 +148,9 @@ export default function WhyClinicsChooseRadnav() {
                   {description}
                 </p>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

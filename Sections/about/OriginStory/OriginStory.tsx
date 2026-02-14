@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function OriginStory() {
   return (
@@ -12,7 +13,13 @@ export default function OriginStory() {
         {/* Two-column: image left, text right - 50/50 split */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-14 xl:gap-16">
           {/* Left: image with rounded corners + blue accent */}
-          <div className="relative shrink-0">
+          <motion.div
+            className="relative shrink-0"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
             <div
               className="absolute -bottom-4 -right-4 z-0 h-5 w-28 rounded-2xl bg-[#1E3A5F] sm:-bottom-5 sm:-right-5 sm:h-32 sm:w-32 lg:h-60 lg:w-70"
               aria-hidden
@@ -27,10 +34,16 @@ export default function OriginStory() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: headline + body */}
-          <div className="flex flex-col lg:pt-2">
+          <motion.div
+            className="flex flex-col lg:pt-2"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h2
               id="origin-story-heading"
               className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
@@ -52,16 +65,22 @@ export default function OriginStory() {
                 match the right professionals with the right opportunities.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Centered quote */}
-        <blockquote className="mx-auto mt-14 max-w-3xl text-center sm:mt-16 md:mt-20">
+        <motion.blockquote
+          className="mx-auto mt-14 max-w-3xl text-center sm:mt-16 md:mt-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        >
           <p className="text-xl font-semibold leading-snug text-[#171717] sm:text-2xl md:text-3xl">
             &ldquo;Our goal is not just to fill roles but to help healthcare
             organizations thrive.&rdquo;
           </p>
-        </blockquote>
+        </motion.blockquote>
       </div>
     </section>
   );
