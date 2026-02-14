@@ -87,12 +87,12 @@ export default function WhatWeDo() {
           />
         </div>
 
-        {/* Content Container - 1390px max-width, no left padding (contains title, subtitle, cards) */}
+        {/* Content Container - 1390px max-width, centered with proper padding */}
         <div className="relative z-10">
-          <div className="mx-auto w-full max-w-[1380px] pl-4 pr-4 sm:pl-0 sm:pr-6 lg:pr-8">
+          <div className="mx-auto w-full max-w-[1380px] px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col justify-between gap-10 py-8 sm:gap-12 sm:py-10 md:min-h-[500px] md:py-12 lg:min-h-[550px]">
-              {/* Title and subtitle — top-left of the 1390px container */}
-              <div className="pl-4 sm:pl-6 lg:pl-8">
+              {/* Title and subtitle — top-left of the container */}
+              <div>
                 <h2
                   id="what-we-do-heading"
                   className="text-[30px] font-bold tracking-tight text-white md:text-[30px] lg:text-[48px] xl:text-[48px]"
@@ -105,13 +105,13 @@ export default function WhatWeDo() {
                 </p>
               </div>
 
-              {/* White cards — at bottom of the 1390px container */}
-              <div>
+              {/* White cards — at bottom of the container, properly spaced */}
+              <div className="w-full">
                 <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3 lg:gap-8">
                   {CARDS.map(({ title, description, icon }) => (
                     <article
                       key={title}
-                      className="group flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 transition-all duration-300 hover:shadow-xl hover:shadow-gray-900/25 hover:-translate-y-2 hover:scale-[1.02] sm:p-7"
+                      className="group flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 transition-all duration-300 hover:shadow-xl hover:shadow-gray-900/25 hover:-translate-y-2 hover:scale-[1.02] sm:p-7 md:p-6 lg:p-7"
                     >
                       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#2E5D81] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1f405a] group-hover:rotate-3">
                         <div className="transition-transform duration-300 group-hover:scale-110">
