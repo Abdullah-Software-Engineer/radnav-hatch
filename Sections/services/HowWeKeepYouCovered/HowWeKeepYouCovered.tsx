@@ -16,7 +16,7 @@ export default function HowWeKeepYouCovered() {
       aria-labelledby="how-we-keep-you-covered-heading"
     >
       <div className="mx-auto max-w-[1390px]">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:gap-12 xl:gap-16">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:gap-6 xl:gap-8">
           {/* Left Side - Text Content (50% width) */}
           <div className="flex flex-col justify-center">
             <h2

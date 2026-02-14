@@ -28,7 +28,7 @@ export default function ScheduleCTA() {
           <div className="relative z-10 flex flex-col items-center justify-center px-6 py-14 text-center sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-20 lg:py-24">
             <h2
               id="schedule-cta-heading"
-              className="max-w-4xl text-[30px] leading-snug text-white md:text-[30px] lg:text-[48px] xl:text-[48px] md:leading-snug"
+              className="max-w-4xl text-[22px] leading-snug text-white sm:text-[26px] md:text-[30px] lg:text-[48px] xl:text-[48px] md:leading-snug"
             >
               Ease workload pressure and maintain high-quality care with expert
               radiology navigators built to support your team.
