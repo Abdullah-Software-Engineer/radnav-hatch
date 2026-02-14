@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function ContactHero() {
   return (
     <section
-      className="relative w-full pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-20 lg:py-24"
+      className="relative w-full pt-24 pb-0 sm:pt-28 md:pt-32 lg:pt-36"
       aria-label="Contact hero"
     >
       {/* Full Width Container - 20px margins, 20px border radius (contains image) */}
