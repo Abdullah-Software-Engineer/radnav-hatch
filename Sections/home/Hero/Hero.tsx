@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <section
@@ -26,15 +24,16 @@ export default function Hero() {
 
       {/* Full Width Container - below content container */}
       <div className="w-full mt-5">
-        {/* Image Container - 20px margins on all sides, 20px border radius */}
+        {/* Video Container - 20px margins on all sides, 20px border radius */}
         <div className="relative mx-5 sm:mx-5 md:mx-5 lg:mx-5 overflow-hidden rounded-[20px] bg-[#f1f5f9] shadow-md aspect-16/10 sm:aspect-video">
-          <Image
-            src="/home/hero.webp"
-            alt="Radnav Solutions — connecting healthcare with qualified radiology technologists"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
+          <video
+            src="/home/radnav-video.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            aria-label="Radnav Solutions — connecting healthcare with qualified radiology technologists"
           />
         </div>
       </div>
