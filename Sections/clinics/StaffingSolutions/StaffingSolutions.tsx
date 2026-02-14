@@ -33,10 +33,10 @@ export default function StaffingSolutions() {
           {MODALITIES.map((modality) => (
             <article
               key={modality}
-              className="flex items-center gap-4 rounded-lg border border-[#BFD8E8] bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+              className="group flex items-center gap-4 rounded-lg border border-[#BFD8E8] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 hover:border-[#2E5D81]"
             >
               <svg
-                className="h-6 w-6 shrink-0 text-[#2E5D81]"
+                className="h-6 w-6 shrink-0 text-[#2E5D81] transition-all duration-300 group-hover:scale-125 group-hover:rotate-12"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ export default function StaffingSolutions() {
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h3 className="text-[16px] font-medium text-[#171717]">
+              <h3 className="text-[16px] font-medium text-[#171717] transition-colors duration-300 group-hover:text-[#2E5D81]">
                 {modality}
               </h3>
             </article>

@@ -111,12 +111,14 @@ export default function WhatWeDo() {
                   {CARDS.map(({ title, description, icon }) => (
                     <article
                       key={title}
-                      className="flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 sm:p-7"
+                      className="group flex flex-col rounded-xl bg-white p-6 shadow-lg shadow-gray-900/15 transition-all duration-300 hover:shadow-xl hover:shadow-gray-900/25 hover:-translate-y-2 hover:scale-[1.02] sm:p-7"
                     >
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#2E5D81] text-white">
-                        {icon}
+                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#2E5D81] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1f405a] group-hover:rotate-3">
+                        <div className="transition-transform duration-300 group-hover:scale-110">
+                          {icon}
+                        </div>
                       </div>
-                      <h3 className="text-[20px] font-bold text-[#171717]">
+                      <h3 className="text-[20px] font-bold text-[#171717] transition-colors duration-300 group-hover:text-[#2E5D81]">
                         {title}
                       </h3>
                       <p className="mt-2 text-[14px] leading-relaxed text-[#5B7281]">

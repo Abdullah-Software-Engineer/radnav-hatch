@@ -164,13 +164,15 @@ export default function WhyTechsLoveUs() {
           {CARDS.map(({ title, description, icon }) => (
             <article
               key={title}
-              className="flex items-start rounded-2xl border border-[#BFD8E8] bg-white p-6 shadow-sm hover:shadow-md transition-shadow sm:p-8"
+              className="group flex items-start rounded-2xl border border-[#BFD8E8] bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-black/10 hover:-translate-y-1 hover:scale-[1.01] hover:border-[#2E5D81] sm:p-8"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2E5D81] text-white">
-                {icon}
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2E5D81] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1f405a]">
+                <div className="transition-transform duration-300 group-hover:rotate-6">
+                  {icon}
+                </div>
               </div>
               <div className="ml-6">
-                <h3 className="text-[18px] font-bold tracking-tight text-[#171717] sm:text-[20px]">
+                <h3 className="text-[18px] font-bold tracking-tight text-[#171717] transition-colors duration-300 group-hover:text-[#2E5D81] sm:text-[20px]">
                   {title}
                 </h3>
                 <p className="mt-2 text-[14px] leading-relaxed text-[#5B7281] sm:text-[15px]">

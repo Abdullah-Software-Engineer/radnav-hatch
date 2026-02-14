@@ -67,18 +67,18 @@ export default function WhyChooseRadnav() {
             {CARDS.map(({ icon, title, description }) => (
               <article
                 key={title}
-                className="group flex flex-col items-center text-center rounded-xl bg-white p-6 shadow-lg shadow-black/10 transition-shadow hover:shadow-xl"
+                className="group flex flex-col items-center text-center rounded-xl bg-white p-6 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-2 hover:scale-[1.02]"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-[#214E6E]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-[#214E6E] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <Image
                     src={icon}
                     alt=""
                     width={28}
                     height={28}
-                    className="h-7 w-7 object-contain"
+                    className="h-7 w-7 object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <h3 className="mt-4 text-[20px] font-bold tracking-tight text-[#171717]">
+                <h3 className="mt-4 text-[20px] font-bold tracking-tight text-[#171717] transition-colors duration-300 group-hover:text-[#2E5D81]">
                   {title}
                 </h3>
                 <p className="mt-2 text-[#5B7281] text-[14px] leading-relaxed">

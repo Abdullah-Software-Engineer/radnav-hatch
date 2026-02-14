@@ -46,18 +46,18 @@ export default function KeyBenefits() {
           {BENEFITS.map(({ text, bgClass, hasDashedOutline }, index) => (
             <div
               key={text}
-              className={`relative flex h-24 w-24 shrink-0 items-center justify-center sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 xl:h-52 xl:w-52 ${index > 0 ? "-ml-3 sm:-ml-4 md:-ml-6 lg:-ml-8 xl:-ml-12" : ""}`}
+              className={`group relative flex h-24 w-24 shrink-0 items-center justify-center transition-all duration-300 hover:z-20 hover:scale-110 sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 xl:h-52 xl:w-52 ${index > 0 ? "-ml-3 sm:-ml-4 md:-ml-6 lg:-ml-8 xl:-ml-12" : ""}`}
             >
               {hasDashedOutline && (
                 <div
-                  className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-[#7eb8d4]"
+                  className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-[#7eb8d4] transition-all duration-300 group-hover:scale-110 group-hover:border-[#5aa3c4]"
                   aria-hidden
                 />
               )}
               <div
-                className={`relative z-10 flex h-full w-full items-center justify-center rounded-full ${bgClass}`}
+                className={`relative z-10 flex h-full w-full items-center justify-center rounded-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-black/25 ${bgClass}`}
               >
-                <p className="px-2 text-center text-[10px] font-medium leading-tight text-white sm:px-3 sm:text-xs md:px-4 md:text-sm lg:text-base">
+                <p className="px-2 text-center text-[10px] font-medium leading-tight text-white transition-transform duration-300 group-hover:scale-105 sm:px-3 sm:text-xs md:px-4 md:text-sm lg:text-base">
                   {text}
                 </p>
               </div>

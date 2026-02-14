@@ -26,12 +26,12 @@ export default function HowWeDeliver() {
         <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 md:items-end lg:mt-16 lg:grid-cols-4 lg:items-end lg:gap-6">
           {/* Card 1: tallest - Gradient */}
           <article
-            className="flex min-h-[340px] flex-col justify-center rounded-[30px] p-8 sm:min-h-[380px] lg:min-h-[420px]"
+            className="group flex min-h-[340px] flex-col justify-center rounded-[30px] p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/20 sm:min-h-[380px] lg:min-h-[420px]"
             style={{
               background: "linear-gradient(180deg, #AEE2F8 0%, #2E5D81 100%)",
             }}
           >
-            <div className="mb-6 flex h-16 w-16 items-center justify-center">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <Image
                 src="/About-us/Radiology.png"
                 alt=""
@@ -40,7 +40,7 @@ export default function HowWeDeliver() {
                 className="h-14 w-14 object-contain"
               />
             </div>
-            <h3 className="text-[24px] font-medium leading-tight text-[#171717]">
+            <h3 className="text-[24px] font-medium leading-tight text-[#171717] transition-transform duration-300 group-hover:translate-x-1">
               Radiology-Driven Leadership
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-[#171717]">
@@ -49,8 +49,8 @@ export default function HowWeDeliver() {
           </article>
 
           {/* Card 2: Dark Blue */}
-          <article className="flex min-h-[300px] flex-col justify-center rounded-[30px] bg-[#2E5D81] p-8 sm:min-h-[340px] lg:min-h-[360px]">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center">
+          <article className="group flex min-h-[300px] flex-col justify-center rounded-[30px] bg-[#2E5D81] p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/30 hover:bg-[#1f405a] sm:min-h-[340px] lg:min-h-[360px]">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <Image
                 src="/About-us/Vetted.png"
                 alt=""
@@ -59,7 +59,7 @@ export default function HowWeDeliver() {
                 className="h-14 w-14 object-contain"
               />
             </div>
-            <h3 className="text-[24px] font-medium leading-tight text-white">
+            <h3 className="text-[24px] font-medium leading-tight text-white transition-transform duration-300 group-hover:translate-x-1">
               Vetted Professionals
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-white/90">
@@ -68,22 +68,22 @@ export default function HowWeDeliver() {
           </article>
 
           {/* Card 3: Light Gray/Blue - Shortest */}
-          <article className="flex min-h-[200px] flex-col justify-center rounded-[30px] bg-[#DDE5EB] p-8 sm:min-h-[240px] lg:min-h-[220px]">
-            <p className="text-[20px] font-medium leading-tight text-[#171717]">
+          <article className="group flex min-h-[200px] flex-col justify-center rounded-[30px] bg-[#DDE5EB] p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl hover:shadow-black/15 hover:bg-[#d0dbe4] sm:min-h-[240px] lg:min-h-[220px]">
+            <p className="text-[20px] font-medium leading-tight text-[#171717] transition-transform duration-300 group-hover:translate-x-1">
               Staffing that scales with your needs.
             </p>
             <Link
               href="/services"
-              className="mt-6 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-[#2E5D81] px-6 py-3 text-[14px] font-semibold text-white transition hover:bg-[#1f405a]"
+              className="mt-6 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-[#2E5D81] px-6 py-3 text-[14px] font-semibold text-white transition-all duration-300 hover:bg-[#1f405a] hover:scale-105 group-hover:translate-x-1"
             >
               View Services
-              <span aria-hidden>→</span>
+              <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </article>
 
           {/* Card 4: Cyan - Medium */}
-          <article className="flex min-h-[300px] flex-col justify-center rounded-[30px] bg-[#4FB3D9] p-8 sm:min-h-[340px] lg:min-h-[360px]">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center">
+          <article className="group flex min-h-[300px] flex-col justify-center rounded-[30px] bg-[#4FB3D9] p-8 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/20 hover:bg-[#3da3c9] sm:min-h-[340px] lg:min-h-[360px]">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <Image
                 src="/About-us/Ethical.png"
                 alt=""
@@ -92,7 +92,7 @@ export default function HowWeDeliver() {
                 className="h-14 w-14 object-contain"
               />
             </div>
-            <h3 className="text-[24px] font-medium leading-tight text-white">
+            <h3 className="text-[24px] font-medium leading-tight text-white transition-transform duration-300 group-hover:translate-x-1">
               Ethical by Design
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-white/95">

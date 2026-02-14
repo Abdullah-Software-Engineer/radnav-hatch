@@ -92,12 +92,14 @@ export default function OurServices() {
           {SERVICES.map(({ title, description, icon }) => (
             <article
               key={title}
-              className="flex flex-col rounded-2xl border border-[#2E5D81] bg-white p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.04),0_6px_16px_-2px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.08)] sm:p-8"
+              className="group flex flex-col rounded-2xl border border-[#2E5D81] bg-white p-6 shadow-[0_1px_3px_0_rgba(0,0,0,0.04),0_6px_16px_-2px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.08)] hover:border-[#1f405a] sm:p-8"
             >
-              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2E5D81] text-white sm:mb-6 sm:h-14 sm:w-14">
-                {icon}
+              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2E5D81] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1f405a] group-hover:rotate-3 sm:mb-6 sm:h-14 sm:w-14">
+                <div className="transition-transform duration-300 group-hover:scale-110">
+                  {icon}
+                </div>
               </div>
-              <h3 className="text-[20px] font-bold tracking-tight text-[#171717]">
+              <h3 className="text-[20px] font-bold tracking-tight text-[#171717] transition-colors duration-300 group-hover:text-[#2E5D81]">
                 {title}
               </h3>
               <p className="mt-3 flex-1 text-[14px] leading-relaxed text-[#5B7281] sm:mt-4">
