@@ -32,7 +32,7 @@ export default function AboutUs() {
           <div>
             <h2
               id="about-heading"
-              className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
+              className="text-[30px] font-bold tracking-tight leading-tight text-[#171717] md:text-[30px] lg:text-[48px] xl:text-[48px]"
             >
               Know More <span className="text-[#2E5D81]">About Radnav Solutions</span>
             </h2>
