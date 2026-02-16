@@ -66,7 +66,7 @@ export default function HowWeDeliver() {
             <p className="mt-4 text-[16px] leading-relaxed text-[#171717]">
               Built by professionals who know imaging from the inside.
             </p>
-          </article>
+          </motion.article>
 
           {/* Card 2: Dark Blue */}
           <motion.article
