@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useCallback, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -94,12 +95,17 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-[#2E5D81] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#2E5D81]/25 transition hover:bg-[#264a6a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Get In Touch
-          </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-[#2E5D81] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#2E5D81]/25 transition hover:bg-[#264a6a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#32709D] focus-visible:ring-offset-2"
+            >
+              Get In Touch
+            </Link>
+          </motion.div>
         </div>
 
         {/* Mobile menu button */}

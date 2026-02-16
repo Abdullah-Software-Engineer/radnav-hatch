@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { AnimatedButton } from "../../../app/utils/animations";
+
 export default function ClinicsContactForm() {
   return (
     <section
@@ -9,15 +12,25 @@ export default function ClinicsContactForm() {
     >
       <div className="mx-auto max-w-[1390px]">
         <header className="mb-12 text-center sm:mb-16">
-          <h2
+          <motion.h2
             id="contact-form-heading"
             className="text-[30px] font-bold tracking-tight text-[#171717] md:text-[36px] lg:text-[48px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             Ready to Fill Your <span className="text-[#2E5D81]">Staffing Gaps?</span>
-          </h2>
-          <p className="mt-4 text-[16px] leading-relaxed text-[#5B7281] sm:text-[18px]">
+          </motion.h2>
+          <motion.p
+            className="mt-4 text-[16px] leading-relaxed text-[#5B7281] sm:text-[18px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             Tell us your needs and we&apos;ll match you with qualified technologists within 24 hours.
-          </p>
+          </motion.p>
         </header>
 
         <form
@@ -124,12 +137,12 @@ export default function ClinicsContactForm() {
             </div>
 
             <div className="pt-4">
-              <button
+              <AnimatedButton
                 type="submit"
                 className="w-full rounded-lg bg-[#2E5D81] py-4 text-[16px] font-semibold text-white transition hover:bg-[#234b6b] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] focus:ring-offset-2"
               >
                 Send
-              </button>
+              </AnimatedButton>
             </div>
           </form>
       </div>

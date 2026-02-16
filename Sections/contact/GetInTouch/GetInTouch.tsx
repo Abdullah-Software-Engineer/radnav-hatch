@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { AnimatedButton } from "../../../app/utils/animations";
 
 function EnvelopeIcon({ className }: { className?: string }) {
   return (
@@ -103,18 +105,18 @@ export default function GetInTouch() {
       aria-labelledby="get-in-touch-heading"
     >
       <div className="mx-auto max-w-[1390px]">
-        <div className="relative overflow-hidden rounded-[30px] bg-[#FAFAFA] px-6 py-10 sm:px-10 sm:py-12 md:px-12 md:py-16 lg:p-16">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="relative overflow-hidden rounded-[30px] bg-[#FAFAFA] px-4 py-6 sm:px-10 sm:py-12 md:px-12 md:py-16 lg:p-16">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             {/* Left: Contact Form */}
             <div>
               <h2
                 id="get-in-touch-heading"
-                className="mb-8 text-3xl font-bold tracking-tight text-[#171717] sm:text-4xl"
+                className="mb-6 text-2xl font-bold tracking-tight text-[#171717] sm:mb-8 sm:text-3xl md:text-4xl"
               >
                 Get In Touch
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" noValidate>
+                <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
                   <div className="space-y-2">
                     <label
                       htmlFor="contact-name"
@@ -129,7 +131,7 @@ export default function GetInTouch() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Enter your name"
-                      className="w-full rounded-lg bg-[#E2E8F0] px-4 py-3.5 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81]"
+                      className="w-full rounded-lg bg-[#E2E8F0] px-4 py-3 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] sm:py-3.5"
                       required
                     />
                   </div>
@@ -148,7 +150,7 @@ export default function GetInTouch() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Enter your email"
-                      className="w-full rounded-lg bg-[#E2E8F0] px-4 py-3.5 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81]"
+                      className="w-full rounded-lg bg-[#E2E8F0] px-4 py-3 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] sm:py-3.5"
                       required
                     />
                   </div>
@@ -168,7 +170,7 @@ export default function GetInTouch() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Enter your phone number"
-                    className="w-full rounded-lg bg-[#E2E8F0] px-4 py-3.5 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81]"
+                    className="w-full rounded-lg bg-[#E2E8F0] px-4 py-3 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] sm:py-3.5"
                     required
                   />
                 </div>
@@ -187,19 +189,19 @@ export default function GetInTouch() {
                     onChange={handleChange}
                     rows={6}
                     placeholder="Please write your concerns here and our team will reach out to you."
-                    className="w-full resize-none rounded-lg bg-[#E2E8F0] px-4 py-3.5 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81]"
+                    className="w-full resize-none rounded-lg bg-[#E2E8F0] px-4 py-3 text-[#171717] placeholder:text-[#5B7281] focus:outline-none focus:ring-2 focus:ring-[#2E5D81]"
                     required
                   />
                 </div>
 
                 <div className="pt-2">
-                  <button
+                  <AnimatedButton
                     type="submit"
                     disabled={status === "submitting"}
-                    className="rounded-lg bg-[#2E5D81] px-8 py-3.5 text-[16px] font-semibold text-white transition hover:bg-[#234b6b] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] focus:ring-offset-2 disabled:opacity-70"
+                    className="w-full rounded-lg bg-[#2E5D81] px-6 py-3 text-[16px] font-semibold text-white transition hover:bg-[#234b6b] focus:outline-none focus:ring-2 focus:ring-[#2E5D81] focus:ring-offset-2 disabled:opacity-70 sm:w-auto sm:px-8 sm:py-3.5"
                   >
                     {status === "submitting" ? "Sending..." : "Send Message"}
-                  </button>
+                  </AnimatedButton>
                 </div>
                 {status === "done" && (
                   <p className="text-sm text-green-600">
@@ -210,48 +212,48 @@ export default function GetInTouch() {
             </div>
 
             {/* Right: Contact Information Card */}
-            <div className="flex flex-col gap-6 rounded-2xl bg-[#2E5D81] p-8 text-white shadow-lg lg:p-10">
+            <div className="flex flex-col gap-4 rounded-2xl bg-[#2E5D81] p-6 text-white shadow-lg sm:gap-6 sm:p-8 lg:p-10">
               {/* Email Block */}
-              <div className="flex items-center gap-4 rounded-xl bg-[#4A7A9C] p-6 transition hover:bg-[#5B8BAD]">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#2E5D81]">
-                  <EnvelopeIcon className="h-6 w-6" />
+              <div className="flex items-center gap-3 rounded-xl bg-[#4A7A9C] p-4 transition hover:bg-[#5B8BAD] sm:gap-4 sm:p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#2E5D81] sm:h-12 sm:w-12">
+                  <EnvelopeIcon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <a
                   href="mailto:info@radnavsolutions.com"
-                  className="text-[16px] font-medium text-white sm:text-[18px]"
+                  className="break-words text-[14px] font-medium text-white sm:text-[16px] md:text-[18px]"
                 >
                   info@radnavsolutions.com
                 </a>
               </div>
 
               {/* Phone Block */}
-              <div className="flex items-center gap-4 rounded-xl bg-[#4A7A9C] p-6 transition hover:bg-[#5B8BAD]">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#2E5D81]">
-                  <PhoneIcon className="h-6 w-6" />
+              <div className="flex items-center gap-3 rounded-xl bg-[#4A7A9C] p-4 transition hover:bg-[#5B8BAD] sm:gap-4 sm:p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#2E5D81] sm:h-12 sm:w-12">
+                  <PhoneIcon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <span className="text-[16px] font-medium text-white sm:text-[18px]">
+                <span className="text-[14px] font-medium text-white sm:text-[16px] md:text-[18px]">
                   Phone Number
                 </span>
               </div>
 
               {/* Working Hours Block */}
-              <div className="flex-1 rounded-xl bg-[#4A7A9C] p-8 transition hover:bg-[#5B8BAD]">
-                <div className="mb-6 flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#2E5D81]">
-                    <ClockIcon className="h-6 w-6" />
+              <div className="flex-1 rounded-xl bg-[#4A7A9C] p-6 transition hover:bg-[#5B8BAD] sm:p-8">
+                <div className="mb-4 flex items-center gap-3 sm:mb-6 sm:gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#2E5D81] sm:h-12 sm:w-12">
+                    <ClockIcon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-white">
+                  <h3 className="text-[18px] font-semibold text-white sm:text-[20px]">
                     Working Hours
                   </h3>
                 </div>
-                <div className="space-y-3 pl-16">
+                <div className="space-y-2.5 pl-0 sm:space-y-3 sm:pl-16">
                   {WORKING_HOURS.map(({ day, hours }) => (
                     <div
                       key={day}
-                      className="flex justify-between text-[15px] text-white/95"
+                      className="flex justify-between text-[14px] text-white/95 sm:text-[15px]"
                     >
                       <span className="font-medium">{day}:</span>
-                      <span>{hours}</span>
+                      <span className="text-right">{hours}</span>
                     </div>
                   ))}
                 </div>

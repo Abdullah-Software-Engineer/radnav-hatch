@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { staggerContainer, cardAnimation } from "../../../app/utils/animations";
 
 const ArrowIcon = () => (
   <svg
@@ -45,36 +47,54 @@ export default function WhoWeSupport() {
       <div className="mx-auto max-w-[1390px]">
         {/* Heading + subheading — centered */}
         <header className="mx-auto max-w-3xl text-center">
-          <h2
+          <motion.h2
             id="who-we-support-heading"
             className="text-[30px] font-bold tracking-tight text-[#333333] md:text-[30px] lg:text-[48px] xl:text-[48px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             Who We{" "}
             <span className="text-[#2D78AD]">Support</span>
-          </h2>
-          <p className="mt-4 text-[14px] text-[#333333] md:text-[14px] lg:text-[16px] xl:text-[16px]">
+          </motion.h2>
+          <motion.p
+            className="mt-4 text-[14px] text-[#333333] md:text-[14px] lg:text-[16px] xl:text-[16px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             Customized radiology staffing solutions designed for today&apos;s
             healthcare demands.
-          </p>
+          </motion.p>
         </header>
 
         {/* Two cards — side by side on large screens, stacked on small */}
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:gap-8 md:mt-14 lg:grid-cols-2 lg:gap-10 xl:gap-12">
+        <motion.div
+          className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:gap-8 md:mt-14 lg:grid-cols-2 lg:gap-10 xl:gap-12"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {cards.map((card, index) => (
-            <article
+            <motion.article
               key={index}
-              className={
+              className={`group flex flex-col rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-black/15 sm:p-8 md:p-10 ${
                 card.variant === "filled"
-                  ? "flex flex-col rounded-2xl bg-[#2D6B8C] p-6 shadow-sm sm:p-8 md:p-10"
-                  : "flex flex-col rounded-2xl border-2 border-[#2D6B8C] bg-white p-6 shadow-sm sm:p-8 md:p-10"
-              }
+                  ? "bg-[#2D6B8C] hover:bg-[#255a77]"
+                  : "border-2 border-[#2D6B8C] bg-white hover:border-[#1f4a66]"
+              }`}
+              variants={cardAnimation}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
               <h3
-                className={
+                className={`text-[20px] font-bold transition-transform duration-300 group-hover:translate-x-1 ${
                   card.variant === "filled"
-                    ? "text-[20px] font-bold text-white"
-                    : "text-[20px] font-bold text-[#2D6B8C]"
-                }
+                    ? "text-white"
+                    : "text-[#2D6B8C]"
+                }`}
               >
                 {card.title}
               </h3>
@@ -89,18 +109,20 @@ export default function WhoWeSupport() {
               </p>
               <Link
                 href={card.href}
-                className={
+                className={`mt-6 inline-flex items-center gap-2 text-[16px] font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group-hover:translate-x-1 ${
                   card.variant === "filled"
-                    ? "mt-6 inline-flex items-center gap-2 text-[16px] font-semibold text-white transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2D6B8C]"
-                    : "mt-6 inline-flex items-center gap-2 text-[16px] font-semibold text-[#2D6B8C] transition hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2D6B8C] focus-visible:ring-offset-2"
-                }
+                    ? "text-white hover:opacity-90 focus-visible:ring-white focus-visible:ring-offset-[#2D6B8C]"
+                    : "text-[#2D6B8C] hover:opacity-80 focus-visible:ring-[#2D6B8C]"
+                }`}
               >
                 Learn more
-                <ArrowIcon />
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  <ArrowIcon />
+                </span>
               </Link>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
