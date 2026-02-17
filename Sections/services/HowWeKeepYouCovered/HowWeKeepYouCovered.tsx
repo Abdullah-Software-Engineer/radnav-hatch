@@ -13,7 +13,7 @@ const FEATURES = [
 
 export default function HowWeKeepYouCovered() {
   return (
-    <div
+    <section
       className="relative w-full bg-white "
       aria-labelledby="how-we-keep-you-covered-heading"
     >
@@ -98,7 +98,7 @@ export default function HowWeKeepYouCovered() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

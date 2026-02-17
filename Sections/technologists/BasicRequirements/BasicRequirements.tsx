@@ -13,7 +13,7 @@ const REQUIREMENTS = [
 export default function BasicRequirements() {
   return (
     <section
-      className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+      className="relative w-full bg-white px-4 py-10 sm:px-6 sm:py-12 md:py-14 lg:px-8 lg:py-16"
       aria-labelledby="basic-requirements-heading"
     >
       <div className="mx-auto max-w-[1390px]">
