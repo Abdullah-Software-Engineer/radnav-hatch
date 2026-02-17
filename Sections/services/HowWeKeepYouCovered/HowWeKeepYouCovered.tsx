@@ -13,12 +13,12 @@ const FEATURES = [
 
 export default function HowWeKeepYouCovered() {
   return (
-    <section
-      className="relative w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8 lg:py-28"
+    <div
+      className="relative w-full bg-white "
       aria-labelledby="how-we-keep-you-covered-heading"
     >
       <div className="mx-auto max-w-[1390px]">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:gap-6 xl:gap-8">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-2 lg:gap-2 xl:gap-3">
           {/* Left Side - Text Content (50% width) */}
           <div className="flex flex-col justify-center">
             <motion.h2
@@ -98,7 +98,7 @@ export default function HowWeKeepYouCovered() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
